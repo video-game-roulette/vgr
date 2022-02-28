@@ -1,5 +1,16 @@
 import './App.css'; /* Global CSS */
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './views/Home/Home';
+import Header from './components/Layout/Header';
+import Footer from './components/Layout/Footer';
+import Login from './views/Auth/Login';
+import Signup from './views/Auth/Signup';
+import About from './views/AboutUs/About';
+import Profile from './views/Profile/Profile';
+import Roulette from './views/Roulette/Roulette';
+import Library from './views/Library/Library';
+import Game from './views/Library/Game';
+import AddEdit from './views/Library/AddEdit';
 
 export default function App() {
   return (
@@ -17,7 +28,7 @@ export default function App() {
             <Signup />
           </Route>
           <Route path="/about-us">
-            <AboutUs />
+            <About />
           </Route>
           <Route path="/profile">
             <Profile />
@@ -38,6 +49,7 @@ export default function App() {
             <AddEdit />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     </main>
   );
