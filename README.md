@@ -24,20 +24,19 @@ the CSS class names as the properties of your imported stylesheet in your JSX:
 ```css
 /* MyComponent.module.css */
 .myCustomCssClass {
- font-family: monospace;
+  font-family: monospace;
 }
 ```
 
 ```js
 // MyComponent.jsx
-import styles from './MyComponent.module.css'
+import styles from './MyComponent.module.css';
 
 export default function MyComponent() {
   return (
-    <h1 className={`text-white ${styles.myCustomCssClass}`}>
-      Hello, World!
-    </h1>
+    <h1 className={`text-white ${styles.myCustomCssClass}`}>Hello, World!</h1>
   );
 }
-
 ```
+
+:)
