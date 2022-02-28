@@ -68,3 +68,4 @@ Our data is hosted on two seperate tables, User & Game Table
   <!-- ![Techswap2](INSERT PNG HERE) -->
 - for more detailed look, navigate to our <a href="https://miro.com/app/board/uXjVOJ2UB54=/?invite_link_id=533943666641"> Miro Board </a>
   <br>
+
