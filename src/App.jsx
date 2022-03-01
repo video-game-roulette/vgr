@@ -4,7 +4,7 @@ import Home from './views/Home/Home';
 import Header from './components/Layout/Header';
 import Footer from './components/Layout/Footer';
 import Login from './views/Auth/Login';
-import Signup from './views/Auth/Signup';
+
 import About from './views/AboutUs/About';
 import Profile from './views/Profile/Profile';
 import Roulette from './views/Roulette/Roulette';
@@ -27,7 +27,9 @@ export default function App() {
               <Login />
             </Route>
             <Route path="/signup">
-              <Signup isSigningUp />
+
+              <Login isSigningUp />
+
             </Route>
             <Route path="/about-us">
               <About />
