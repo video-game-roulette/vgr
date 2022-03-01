@@ -14,12 +14,12 @@ export default function Header() {
           <p className="bg-red-600">VGR</p>
         </Link>
 
-        {user?.email ? (
-          <p className="text-slate-200">Signed in as {user?.email}</p>
+        {user ? (
+          <p className="signedas">Signed in as {user}</p>
         ) : (
           <p className="text-slate-200">Not Signed In</p>
         )}
-        {user?.email ? (
+        {user ? (
           <button
             className="w-70 text-slate-200"
             onClick={async () => {

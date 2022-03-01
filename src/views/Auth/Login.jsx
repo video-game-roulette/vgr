@@ -14,7 +14,7 @@ export default function Login({ isSigningUp = false }) {
         await signUpUser(email, password);
       } else {
         const loggedIn = await signInUser(email, password);
-        setUser({ id: loggedIn.id, email: loggedIn.email });
+        setUser(loggedIn.email);
       }
     } catch (error) {
       throw error;

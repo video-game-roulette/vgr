@@ -15,6 +15,10 @@
   width: 40px;
 }
 
+.signedas {
+  margin: 25px;
+}
+
 .signbutton {
   background-color: white;
   border-radius: 10%;
