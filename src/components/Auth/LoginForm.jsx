@@ -1,6 +1,6 @@
 import './Loginform.css';
 import React, { useEffect } from 'react';
-import { useForm } from '../../hooks/useForm';
+import useForm from '../../hooks/useForm';
 import { Link } from 'react-router-dom';
 
 export default function LoginForm({

@@ -1,0 +1,11 @@
+.randomizer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.back-btn {
+  background-color: white;
+  color: black;
+}
