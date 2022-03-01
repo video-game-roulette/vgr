@@ -11,46 +11,49 @@ import Roulette from './views/Roulette/Roulette';
 import Library from './views/Library/Library';
 import Game from './views/Library/Game';
 import AddEdit from './views/Library/AddEdit';
+import { UserProvider } from './context/UserContext';
 
 export default function App() {
   return (
     <main>
-      <Router>
-        <Header />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/signup">
-            <Signup />
-          </Route>
-          <Route path="/about-us">
-            <About />
-          </Route>
-          <Route path="/profile">
-            <Profile />
-          </Route>
-          <Route path="/roulette">
-            <Roulette />
-          </Route>
-          <Route path="/library">
-            <Library />
-          </Route>
-          <Route path="/library/:gameid">
-            <Game />
-          </Route>
-          <Route path="/library/addgame">
-            <AddEdit />
-          </Route>
-          <Route path="/library/edit/:gameid">
-            <AddEdit />
-          </Route>
-        </Switch>
-        <Footer />
-      </Router>
+      <UserProvider>
+        <Router>
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/signup">
+              <Signup isSigningUp />
+            </Route>
+            <Route path="/about-us">
+              <About />
+            </Route>
+            <Route path="/profile">
+              <Profile />
+            </Route>
+            <Route path="/roulette">
+              <Roulette />
+            </Route>
+            <Route path="/library">
+              <Library />
+            </Route>
+            <Route path="/library/:gameid">
+              <Game />
+            </Route>
+            <Route path="/library/addgame">
+              <AddEdit />
+            </Route>
+            <Route path="/library/edit/:gameid">
+              <AddEdit />
+            </Route>
+          </Switch>
+          <Footer />
+        </Router>
+      </UserProvider>
     </main>
   );
 }
