@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+
 export default function useForm(inputs = {}) {
   const [formState, setFormState] = useState(inputs);
   const [formError, setFormError] = useState('');
