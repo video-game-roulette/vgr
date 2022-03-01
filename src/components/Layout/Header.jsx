@@ -20,15 +20,15 @@ export default function Header() {
           <p className="text-slate-200">Not Signed In</p>
         )}
         {user ? (
-          <button
-            className="w-70 text-slate-200"
-            onClick={async () => {
-              await signOutUser();
-              setUser({});
-            }}
-          >
-            Sign Out
-          </button>
+          <Link to="/">
+            <button
+              className="w-70 text-slate-200"
+              onClick="signOutUser()"
+              // setUser({});
+            >
+              Sign Out
+            </button>
+          </Link>
         ) : (
           <Link to="/login">
             <button className="w-70 text-slate-200">Sign In</button>
