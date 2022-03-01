@@ -8,13 +8,13 @@ export default function Login({ isSigningUp = false }) {
   const { setUser } = useUser();
   const history = useHistory();
 
-  const handleAuth = async (username, password) => {
+  const handleAuth = async (email, password) => {
     try {
       if (isSigningUp) {
-        await signUpUser(username, password);
+        await signUpUser(email, password);
       } else {
-        const loggedIn = await signInUser(username, password);
-        setUser({ id: loggedIn.id, username: loggedIn.username });
+        const loggedIn = await signInUser(email, password);
+        setUser({ id: loggedIn.id, email: loggedIn.email });
       }
     } catch (error) {
       throw error;

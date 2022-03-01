@@ -20,7 +20,7 @@ export default function Header() {
           </mark>
         </Link>
 
-        {user?.username ? `Signed in as ${user?.username}` : 'Not Signed In'}
+        {user?.email ? `Signed in as ${user?.email}` : 'Not Signed In'}
         <button className="signbutton">
           <AuthButton />
         </button>
