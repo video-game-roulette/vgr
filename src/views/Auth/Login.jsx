@@ -24,7 +24,7 @@ export default function Login({ isSigningUp = false }) {
   };
 
   return (
-    <section>
+    <section className="mt-5 my-5">
       <LoginForm
         onSubmit={handleAuth}
         label={isSigningUp ? 'Sign Up' : 'Sign In'}
@@ -34,7 +34,7 @@ export default function Login({ isSigningUp = false }) {
           Already have an account? <Link to="/login">Sign In</Link>
         </p>
       ) : (
-        <p>
+        <p className="text-slate-200">
           Need an account? <Link to="/signup">Sign Up</Link>
         </p>
       )}
