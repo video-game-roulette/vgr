@@ -14,21 +14,21 @@ export default function Header() {
           <p className="bg-red-600">VGR</p>
         </Link>
 
-        {user?.email ? (
-          <p className="text-slate-200">Signed in as {user?.email}</p>
+        {user ? (
+          <p className="signedas">Signed in as {user}</p>
         ) : (
           <p className="text-slate-200">Not Signed In</p>
         )}
-        {user?.email ? (
-          <button
-            className="w-70 text-slate-200"
-            onClick={async () => {
-              await signOutUser();
-              setUser({});
-            }}
-          >
-            Sign Out
-          </button>
+        {user ? (
+          <Link to="/">
+            <button
+              className="w-70 text-slate-200"
+              onClick="signOutUser()"
+              // setUser({});
+            >
+              Sign Out
+            </button>
+          </Link>
         ) : (
           <Link to="/login">
             <button className="w-70 text-slate-200">Sign In</button>
