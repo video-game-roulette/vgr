@@ -9,16 +9,16 @@ export function getSession() {
 }
 
 
-export async function signUpUser(username, password) {
-  const { user, error } = await client.auth.signUp({ username, password });
+export async function signUpUser(email, password) {
+  const { user, error } = await client.auth.signUp({ email, password });
 
   if (error) throw error;
   return user;
 }
 
 
-export async function signInUser(username, password) {
-  const { user, error } = await client.auth.signIn({ username, password });
+export async function signInUser(email, password) {
+  const { user, error } = await client.auth.signIn({ email, password });
 
   if (error) throw error;
   return user;

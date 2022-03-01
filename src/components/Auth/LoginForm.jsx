@@ -1,5 +1,5 @@
 import './Loginform.css';
-import React, { useEffect } from 'react';
+import React from 'react';
 import useForm from '../../hooks/useForm';
 import { Link } from 'react-router-dom';
 
@@ -10,23 +10,21 @@ export default function LoginForm({
 }) {
   const { formState, formError, handleFormChange, setFormError } = useForm({
 
-    username: '',
+    email: '',
 
     password: '',
   });
 
-  useEffect(() => {}, [label]);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const { username, password } = formState;
+    const { email, password } = formState;
 
     try {
       setFormError('');
-      if (!username || password.length < 8)
-        throw new Error('Username & Password has to be 8+ characters');
-      await onSubmit(username, password);
+      if (!email || password.length < 8)
+        throw new Error('email & Password has to be 8+ characters');
+      await onSubmit(email, password);
 
     } catch (error) {
       setFormError(error.message);
@@ -38,12 +36,12 @@ export default function LoginForm({
       <form className={className} onSubmit={handleSubmit}>
         <legend>{label}</legend>
         <section>
-          <label htmlFor="username">Username: </label>
+          <label htmlFor="email">email: </label>
           <input
-            id="username"
-            type="username"
-            name="username"
-            value={formState.username}
+            id="email"
+            type="email"
+            name="email"
+            value={formState.email}
             onChange={handleFormChange}
           />
         </section>
