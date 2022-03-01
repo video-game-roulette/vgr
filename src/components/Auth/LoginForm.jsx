@@ -63,7 +63,7 @@ export default function LoginForm({ onSubmit, label = 'Authenticate' }) {
             onChange={handleFormChange}
           />
         </section>
-        <button class="bg-blue-500 hover:bg-blue-700 py-0.3 text-white font-bold rounded focus:outline-none focus:shadow-outline">
+        <button className="bg-blue-500 hover:bg-blue-700 py-0.3 text-white font-bold rounded focus:outline-none focus:shadow-outline">
           Sign In
         </button>
         {formError && <p>{formError}</p>}
