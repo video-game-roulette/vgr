@@ -32,7 +32,7 @@ export default function LoginForm({
       <form className={className} onSubmit={handleSubmit}>
         <legend>{label}</legend>
         <section>
-          <label htmlFor="email">email: </label>
+          <label htmlFor="email">Email: </label>
           <input
             id="email"
             type="email"
