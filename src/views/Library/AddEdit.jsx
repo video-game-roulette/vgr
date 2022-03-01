@@ -29,7 +29,7 @@ export default function AddEdit({ isAdding = false }) {
   return (
     <section>
       <GameForm
-        onSubmit={handleAuth}
+        onSubmit={handleSubmit}
         label={isAdding ? 'Add Game' : 'Edit Game'}
       />
     </section>

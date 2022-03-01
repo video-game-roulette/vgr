@@ -39,14 +39,14 @@ export default function App() {
               <Route path="/roulette">
                 <Roulette />
               </Route>
+              <Route path="/library/addgame">
+                <AddEdit />
+              </Route>
               <Route path="/library">
                 <Library />
               </Route>
               <Route path="/library/:gameid">
                 <Game />
-              </Route>
-              <Route path="/library/addgame">
-                <AddEdit />
               </Route>
               <Route path="/library/edit/:gameid">
                 <AddEdit />
