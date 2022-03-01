@@ -3,18 +3,16 @@ import React from 'react';
 import useForm from '../../hooks/useForm';
 import { Link } from 'react-router-dom';
 
-export default function LoginForm({
-  className = '',
-  onSubmit,
-  label = 'Authenticate',
-}) {
+export default function LoginForm({ onSubmit, label = 'Authenticate' }) {
   const { formState, formError, handleFormChange, setFormError } = useForm({
     email: '',
+
     password: '',
   });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const { email, password } = formState;
 
     try {
@@ -29,10 +27,18 @@ export default function LoginForm({
 
   return (
     <>
-      <form className={className} onSubmit={handleSubmit}>
+      <form
+        className="bg-white shadow-md rounded py-4 px-4"
+        onSubmit={handleSubmit}
+      >
         <legend>{label}</legend>
         <section>
-          <label htmlFor="email">email: </label>
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="email"
+          >
+            email:{' '}
+          </label>
           <input
             id="email"
             type="email"
@@ -42,8 +48,14 @@ export default function LoginForm({
           />
         </section>
         <section>
-          <label htmlFor="password">Password: </label>
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="password"
+          >
+            Password:{' '}
+          </label>
           <input
+            className="shadow appearance-none border rounded w-full py-1 px-1 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             id="password"
             type="password"
             name="password"
@@ -51,7 +63,9 @@ export default function LoginForm({
             onChange={handleFormChange}
           />
         </section>
-        <button className="formbutton">Sign In</button>
+        <button className="bg-blue-500 hover:bg-blue-700 py-0.3 text-white font-bold rounded focus:outline-none focus:shadow-outline">
+          Sign In
+        </button>
         {formError && <p>{formError}</p>}
       </form>
       <Link to="/">Back to Home</Link>

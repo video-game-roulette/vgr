@@ -4,6 +4,7 @@ import Home from './views/Home/Home';
 import Header from './components/Layout/Header';
 import Footer from './components/Layout/Footer';
 import Login from './views/Auth/Login';
+
 import About from './views/AboutUs/About';
 import Profile from './views/Profile/Profile';
 import Roulette from './views/Roulette/Roulette';
