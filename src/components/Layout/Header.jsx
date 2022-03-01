@@ -1,35 +1,40 @@
 import './Header.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AuthButton from '../Auth/AuthButton/AuthButton';
 import { useUser } from '../../context/UserContext';
+import { signOutUser } from '../../services/user';
 
 export default function Header() {
-
-  const { user } = useUser();
-
+  const { user, setUser } = useUser();
 
   return (
     <>
       <header className="header">
         <Link to="/" className="homelink">
-          <mark
-            style={{
-              backgroundColor: 'red',
-            }}
-          >
-            VGR(home)
-          </mark>
+          <p className="bg-red-600">VGR</p>
         </Link>
 
-
-        {user?.email ? `Signed in as ${user?.email}` : 'Not Signed In'}
-
-        <button className="signbutton">
-          <AuthButton />
-        </button>
+        {user?.email ? (
+          <p className="text-slate-200">Signed in as {user?.email}</p>
+        ) : (
+          <p className="text-slate-200">Not Signed In</p>
+        )}
+        {user?.email ? (
+          <button
+            className="w-70 text-slate-200"
+            onClick={async () => {
+              await signOutUser();
+              setUser({});
+            }}
+          >
+            Sign Out
+          </button>
+        ) : (
+          <Link to="/login">
+            <button className="w-70 text-slate-200">Sign In</button>
+          </Link>
+        )}
       </header>
-      <hr></hr>
     </>
   );
 }
