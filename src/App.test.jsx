@@ -3,6 +3,6 @@ import App from './App';
 
 test('testing app', () => {
   render(<App />);
-  const home = screen.getByText(/home/i);
-  expect(home).toBeInTheDocument();
+  const heading = screen.getByRole('heading', { name: /video game roulette/i });
+  expect(heading).toBeInTheDocument();
 });
