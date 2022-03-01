@@ -1,10 +1,43 @@
 import React from 'react';
 import LoginForm from '../../components/Auth/LoginForm';
+import { useUser } from '../../context/UserContext';
+import { Link, useHistory } from 'react-router-dom';
+import { signUpUser, signInUser } from '../../services/user';
 
-export default function Login() {
+export default function Login({ isSigningUp = false }) {
+  const { setUser } = useUser();
+  const history = useHistory();
+
+  const handleAuth = async (email, password) => {
+    try {
+      if (isSigningUp) {
+        await signUpUser(email, password);
+      } else {
+        const loggedIn = await signInUser(email, password);
+        setUser({ id: loggedIn.id, email: loggedIn.email });
+      }
+    } catch (error) {
+      throw error;
+    } finally {
+      history.replace('/profile');
+    }
+  };
+
   return (
-    <div>
-      <LoginForm />
-    </div>
+    <section>
+      <LoginForm
+        onSubmit={handleAuth}
+        label={isSigningUp ? 'Sign Up' : 'Sign In'}
+      />
+      {isSigningUp ? (
+        <p>
+          Already have an account? <Link to="/login">Sign In</Link>
+        </p>
+      ) : (
+        <p>
+          Need an account? <Link to="/signup">Sign Up</Link>
+        </p>
+      )}
+    </section>
   );
 }
