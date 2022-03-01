@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
-export function useForm(inputs = {}) {
+
+export default function useForm(inputs = {}) {
   const [formState, setFormState] = useState(inputs);
   const [formError, setFormError] = useState('');
 
