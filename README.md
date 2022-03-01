@@ -14,8 +14,7 @@ Our Project team members are:
   ">james.ajoy267@gmail.com
   </a>
   <br>
-  LinkedIn: <a href = "https://www.linkedin.com/in/andrewjoy12/
-      ">https://www.linkedin.com/in/andrewjoy12/
+  LinkedIn: <a href = "https://www.linkedin.com/in/andrewjoy12/">https://www.linkedin.com/in/andrewjoy12/
   </a>
   <br>
   GitHub: <a href = "https://github.com/ajoy267
@@ -68,4 +67,3 @@ Our data is hosted on two seperate tables, User & Game Table
   <!-- ![Techswap2](INSERT PNG HERE) -->
 - for more detailed look, navigate to our <a href="https://miro.com/app/board/uXjVOJ2UB54=/?invite_link_id=533943666641"> Miro Board </a>
   <br>
-
