@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useUser } from '../../../context/UserContext';
+import { signOutUser } from '../../../services/user';
 
 export default function AuthButton(className) {
   const { user, setUser } = useUser();
