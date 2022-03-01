@@ -1,5 +1,5 @@
 import './Loginform.css';
-import React, { useEffect } from 'react';
+import React from 'react';
 import useForm from '../../hooks/useForm';
 import { Link } from 'react-router-dom';
 
@@ -12,8 +12,6 @@ export default function LoginForm({
     email: '',
     password: '',
   });
-
-  useEffect(() => {}, [label]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
