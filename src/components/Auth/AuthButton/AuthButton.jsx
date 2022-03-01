@@ -8,7 +8,7 @@ export default function AuthButton(className) {
 
   return (
     <>
-      {user.email ? (
+      {user.username ? (
         <button
           style={{
             width: '70px',
