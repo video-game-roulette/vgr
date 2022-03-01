@@ -1,0 +1,26 @@
+.header {
+  display: grid;
+  grid: 50px / 2fr 1.25fr auto;
+  align-items: center;
+  justify-items: space-around;
+  border-bottom: 2px dashed var(--gray);
+  padding: 10px;
+}
+
+.homelink {
+  width: 50px;
+}
+
+.homebutton {
+  width: 40px;
+}
+
+.signbutton {
+  background-color: white;
+  border-radius: 10%;
+  width: 80px;
+}
+
+.signbutton:hover {
+  opacity: 30%;
+}
