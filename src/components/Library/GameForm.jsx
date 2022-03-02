@@ -25,6 +25,7 @@ export default function GameForm({ onSubmit, title, label = 'Authenticate' }) {
   return (
     <>
       <form onSubmit={handleSubmit}>
+        <legend>{label}</legend>
         <section>
           <label htmlFor="title">Title: </label>
           <input
@@ -56,7 +57,7 @@ export default function GameForm({ onSubmit, title, label = 'Authenticate' }) {
             onChange={handleFormChange}
           />
         </section>
-        <button>Add Game</button>
+        <button>{label}</button>
         {formError && <p>{formError}</p>}
       </form>
       <Link to="/library">Back to Library</Link>
