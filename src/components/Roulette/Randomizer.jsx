@@ -8,7 +8,6 @@ export default function Randomizer() {
   const { title, description, image } = game;
   const { user } = useUser();
   const [loading, setLoading] = useState(true);
-  console.log('user', user);
 
   useEffect(() => {
     const fetchRandomGame = async () => {
