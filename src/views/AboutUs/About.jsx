@@ -23,7 +23,10 @@ export default function About() {
         </div>
         <h2>Andrew</h2>
       </Link>
-      <p>Andrew Placeholder</p>
+      <p>
+        Switching from being an Amatuer Pro Triathlete to a Fullstack Developer
+        in Beaverton, OR.
+      </p>
       <br></br>
       <Link
         to={{
