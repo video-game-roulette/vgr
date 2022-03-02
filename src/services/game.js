@@ -28,6 +28,7 @@ export async function updateGame(id, title, description, image) {
 }
 
 export async function addGame(title, description, image) {
+  console.log('title, image, description', title, image, description);
   const response = await client
     .from('games')
     .insert({ title, description, image });

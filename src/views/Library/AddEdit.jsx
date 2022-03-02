@@ -6,18 +6,18 @@ import { addGame, updateGame } from '../../services/game';
 export default function AddEdit({ isAdding = false }) {
   const [title, setTitle] = useState();
   const [image, setImage] = useState();
-  const [decrip, setDescrip] = useState();
+  const [description, setDescription] = useState();
   const history = useHistory();
 
-  const handleSubmit = async (title, image, descrip) => {
+  const handleSubmit = async (title, image, description) => {
     try {
-      if (isAdding) {
-        await addGame(title, image, descrip);
+      if (!isAdding) {
+        await addGame(title, image, description);
       } else {
-        const addGame = await updateGame(title, image, descrip);
+        const addGame = await updateGame(title, image, description);
         setTitle(addGame.title);
         setImage(addGame.image);
-        setDescrip(addGame.descrip);
+        setDescription(addGame.description);
       }
     } catch (error) {
       throw error;
