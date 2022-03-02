@@ -34,7 +34,9 @@ export default function App() {
               <Route path="/about-us">
                 <About />
               </Route>
+
               <ProtectedRoute path="/profile">
+
                 <Profile />
               </ProtectedRoute>
               <ProtectedRoute path="/library/edit/:gameid">
