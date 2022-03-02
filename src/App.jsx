@@ -37,9 +37,6 @@ export default function App() {
               <ProtectedRoute path="/profile">
                 <Profile />
               </ProtectedRoute>
-              <ProtectedRoute path="/roulette">
-                <Roulette />
-              </ProtectedRoute>
               <ProtectedRoute path="/library/edit/:gameid">
                 <AddEdit isAdding />
               </ProtectedRoute>
