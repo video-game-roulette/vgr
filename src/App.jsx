@@ -42,7 +42,7 @@ export default function App() {
               <ProtectedRoute path="/library/addgame">
                 <AddEdit />
               </ProtectedRoute>
-              <ProtectedRoute path="/library/:gameid">
+              <ProtectedRoute path="/profile/:gameid">
                 <Game />
               </ProtectedRoute>
               <ProtectedRoute path="/library">
