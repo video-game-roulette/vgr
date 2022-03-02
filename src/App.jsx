@@ -18,7 +18,6 @@ export default function App() {
   return (
     <main>
       <UserProvider>
-
         <GameProvider>
           <Router>
             <Header />
@@ -35,7 +34,7 @@ export default function App() {
               <Route path="/about-us">
                 <About />
               </Route>
-              <Route path="/profile">
+              <Route path="/profile/">
                 <Profile />
               </Route>
               <Route path="/roulette">
@@ -57,7 +56,6 @@ export default function App() {
             <Footer />
           </Router>
         </GameProvider>
-
       </UserProvider>
     </main>
   );

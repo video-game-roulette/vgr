@@ -3,8 +3,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useUser } from '../../context/UserContext';
 
-export default function UserProfile() {
+export default function UserProfile({ games }) {
   const { user } = useUser();
+  console.log('games', games);
 
   return (
     <div>
@@ -18,7 +19,13 @@ export default function UserProfile() {
       <Link to="/library/addgame">
         <button className="border-2 border-sky-500">Add Game</button>
       </Link>
+      <div>
+        {games.map((game) => (
+          <div key={game.id}>
+            <h1>{game.title}</h1>
+          </div>
+        ))}
+      </div>
     </div>
   );
-
 }

@@ -39,3 +39,11 @@ export async function deleteGame(id) {
   const response = await client.from('games').delete().match({ id: id });
   return response;
 }
+
+export async function getUserGame(id) {
+  const response = await client
+    .from('games')
+    .select('*')
+    .match({ user_id: client.auth.user().id });
+  return response;
+}
