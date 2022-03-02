@@ -15,6 +15,9 @@ export default function UserProfile() {
       <Link to="/library">
         <button className="border-2 border-sky-500">Game Library</button>
       </Link>
+      <Link to="/library/addgame">
+        <button className="border-2 border-sky-500">Add Game</button>
+      </Link>
     </div>
   );
 
