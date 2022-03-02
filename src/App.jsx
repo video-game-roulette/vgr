@@ -6,7 +6,6 @@ import Footer from './components/Layout/Footer';
 import Login from './views/Auth/Login';
 import About from './views/AboutUs/About';
 import Profile from './views/Profile/Profile';
-import Roulette from './views/Roulette/Roulette';
 import Library from './views/Library/Library';
 import Game from './views/Library/Game';
 import AddEdit from './views/Library/AddEdit';
@@ -34,7 +33,6 @@ export default function App() {
               <Route path="/about-us">
                 <About />
               </Route>
-
               <ProtectedRoute path="/profile">
                 <Profile />
               </ProtectedRoute>
