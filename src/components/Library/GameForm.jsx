@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import useForm from '../../hooks/useForm';
 
-export default function GameForm({ onSubmit, title, label = 'Authenticate' }) {
+export default function GameForm({ game, onSubmit, label = 'Authenticate' }) {
   const { formState, formError, handleFormChange, setFormError } = useForm({
-    title: '',
-    description: '',
-    image: '',
+    title: game?.title || '',
+    description: game?.description || '',
+    image: game?.image || '',
   });
 
   const handleSubmit = async (e) => {

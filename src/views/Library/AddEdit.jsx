@@ -6,22 +6,24 @@ import GameForm from '../../components/Library/GameForm';
 import { addGame, getGamesById, updateGame } from '../../services/game';
 
 export default function AddEdit({ isAdding = false }) {
-  const [title, setTitle] = useState();
-  const [image, setImage] = useState();
-  const [description, setDescription] = useState();
-  const [input, setInput] = useState({ title: '', description: '', image: '' });
+  // const [title, setTitle] = useState();
+  // const [image, setImage] = useState();
+  // const [description, setDescription] = useState();
+  // const [input, setInput] = useState({ title: '', description: '', image: '' });
   const [game, setGame] = useState({ title: '', description: '', image: '' });
+  const [loading, setLoading] = useState(true);
   const history = useHistory();
   const { gameid } = useParams();
 
-  useEffect(() => {
-    setInput(game.data);
-  }, [game.data]);
+  // useEffect(() => {
+  //   setInput(game.data);
+  // }, [game.data]);
 
   useEffect(() => {
     const fetchData = async () => {
       const resp = await getGamesById(gameid);
       setGame(resp);
+      setLoading(false);
     };
     fetchData();
   }, [gameid]);
@@ -43,9 +45,12 @@ export default function AddEdit({ isAdding = false }) {
     }
   };
 
+  if (loading) return <p>loading...</p>;
+
   return (
     <section>
       <GameForm
+        game={game.data}
         onSubmit={handleSubmit}
         label={!gameid ? 'Add Game' : 'Edit Game'}
       />
