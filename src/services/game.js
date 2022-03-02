@@ -31,7 +31,7 @@ export async function addGame(title, description, image) {
   console.log('title, image, description', title, image, description);
   const response = await client
     .from('games')
-    .insert({ title, description, image });
+    .insert({ title, description, image, user_id: client.auth.user().id });
   return response;
 }
 
