@@ -3,8 +3,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useUser } from '../../context/UserContext';
 
-export default function UserProfile({ games }) {
+export default function UserProfile({ game }) {
   const { user } = useUser();
+  const data = game.data;
+  console.log('games', game);
 
   return (
     <div>
@@ -20,13 +22,13 @@ export default function UserProfile({ games }) {
         <button className="border-2 border-sky-500">Add Game</button>
       </Link>
 
-      {/* <div>
-        {games.map((game) => (
-          <div key={game.id}>
-            <h1>{game.title}</h1>
+      <div>
+        {data.map((item) => (
+          <div key={item.id}>
+            <h1>{item.title}</h1>
           </div>
         ))}
-      </div> */}
+      </div>
 
       {/* Delete after Edit works */}
       <Link to="/library/edit/9">

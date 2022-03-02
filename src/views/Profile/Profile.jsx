@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-
 import UserProfile from '../../components/Profile/UserProfile';
+import { useGame } from '../../context/GameContext';
 import { fetchGames } from '../../services/game';
 
 export default function Profile() {
-  const [games, setGames] = useState([]);
+  const { game, setGame } = useGame();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchGames();
-      setGames(data);
+      setGame(data);
       setLoading(false);
     };
     fetchData();
@@ -23,7 +22,7 @@ export default function Profile() {
 
   return (
     <div>
-      <UserProfile games={games} />
+      <UserProfile game={game} />
     </div>
   );
 }
