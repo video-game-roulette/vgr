@@ -2,21 +2,23 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import useForm from '../../hooks/useForm';
 
-export default function GameForm({ onSubmit, label = 'Authenticate' }) {
+export default function GameForm({ onSubmit, title, label = 'Authenticate' }) {
   const { formState, formError, handleFormChange, setFormError } = useForm({
     title: '',
+    description: '',
     image: '',
-    descrip: '',
   });
+
+  console.log('title', title);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { title, image, description } = formState;
+    const { title, description, image } = formState;
 
     try {
       setFormError('');
       if (!title) throw new Error('Please enter a game title');
-      await onSubmit(title, image, description);
+      await onSubmit(title, description, image);
     } catch (error) {
       setFormError(error.message);
     }
@@ -36,6 +38,16 @@ export default function GameForm({ onSubmit, label = 'Authenticate' }) {
           />
         </section>
         <section>
+          <label htmlFor="description">Description: </label>
+          <input
+            id="description"
+            type="text"
+            name="description"
+            value={formState.description}
+            onChange={handleFormChange}
+          />
+        </section>
+        <section>
           <label htmlFor="image">Image Link: </label>
           <input
             htmlFor="image"
@@ -43,16 +55,6 @@ export default function GameForm({ onSubmit, label = 'Authenticate' }) {
             type="text"
             name="image"
             value={formState.image}
-            onChange={handleFormChange}
-          />
-        </section>
-        <section>
-          <label htmlFor="description">Description: </label>
-          <input
-            id="description"
-            type="text"
-            name="description"
-            value={formState.description}
             onChange={handleFormChange}
           />
         </section>

@@ -20,7 +20,6 @@ export async function updateGame(id, title, description, image) {
 }
 
 export async function addGame(title, description, image) {
-  console.log('title, image, description', title, image, description);
   const response = await client
     .from('games')
     .insert({ title, description, image, user_id: client.auth.user().id });
@@ -29,5 +28,13 @@ export async function addGame(title, description, image) {
 
 export async function deleteGame(id) {
   const response = await client.from('games').delete().match({ id: id });
+  return response;
+}
+
+export async function getUserGame(id) {
+  const response = await client
+    .from('games')
+    .select('*')
+    .match({ user_id: client.auth.user().id });
   return response;
 }
