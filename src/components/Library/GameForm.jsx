@@ -2,16 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import useForm from '../../hooks/useForm';
 
-export default function GameForm({
-  onSubmit,
-  onChange,
-  label = 'Authenticate',
-}) {
+export default function GameForm({ onSubmit, title, label = 'Authenticate' }) {
   const { formState, formError, handleFormChange, setFormError } = useForm({
     title: '',
     description: '',
     image: '',
   });
+
+  console.log('title', title);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

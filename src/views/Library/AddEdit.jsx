@@ -26,19 +26,15 @@ export default function AddEdit({ isAdding = false }) {
     fetchData();
   }, [gameid]);
 
-  console.log('game.data', game);
-
-  const onChange = ({ target }) => {
-    setInput((prevState) => ({ ...prevState, [target.name]: target.value }));
-  };
+  console.log('game.data', game.data);
 
   const handleSubmit = async (title, description, image) => {
     try {
       if (!isAdding) {
         await addGame(title, description, image);
       } else {
-        const addGame = await updateGame(params.id, title, description, image);
-        setTitle(game.title);
+        await updateGame(gameid.id, title, description, image);
+        setTitle(addGame.title);
         setDescription(addGame.description);
         setImage(addGame.image);
       }
@@ -53,7 +49,6 @@ export default function AddEdit({ isAdding = false }) {
     <section>
       <GameForm
         onSubmit={handleSubmit}
-        onChange={onChange}
         label={isAdding ? 'Add Game' : 'Edit Game'}
       />
     </section>
