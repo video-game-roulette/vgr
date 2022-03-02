@@ -31,9 +31,7 @@ export default function LoginForm({ onSubmit, label = 'Authenticate' }) {
         className="bg-white shadow-md rounded py-4 px-4"
         onSubmit={handleSubmit}
       >
-
         <legend className="text-sm font-bold ">{label}</legend>
-
         <section>
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
@@ -66,14 +64,11 @@ export default function LoginForm({ onSubmit, label = 'Authenticate' }) {
             onChange={handleFormChange}
           />
         </section>
-
         <button className="bg-blue-500 hover:bg-blue-700 py-0.3 text-white font-bold rounded focus:outline-none focus:shadow-outline">
-
           Sign In
         </button>
         {formError && <p>{formError}</p>}
       </form>
-
       <button className="bg-slate-400 rounded absolute left-80  ">
         <Link className="text-black font-bold " to="/">
           Back to Home

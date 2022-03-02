@@ -9,7 +9,7 @@ export default function UserProfile() {
   return (
     <div>
       <h1>Welcome {user}</h1>
-      <Link to="/roulette">
+      <Link to={`/library/9`}>
         <button className="border-2 border-sky-500">Find A Game</button>
       </Link>
       <Link to="/library">
@@ -20,5 +20,4 @@ export default function UserProfile() {
       </Link>
     </div>
   );
-
 }
