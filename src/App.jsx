@@ -4,7 +4,6 @@ import Home from './views/Home/Home';
 import Header from './components/Layout/Header';
 import Footer from './components/Layout/Footer';
 import Login from './views/Auth/Login';
-
 import About from './views/AboutUs/About';
 import Profile from './views/Profile/Profile';
 import Roulette from './views/Roulette/Roulette';
@@ -18,7 +17,6 @@ export default function App() {
   return (
     <main>
       <UserProvider>
-
         <GameProvider>
           <Router>
             <Header />
@@ -57,7 +55,6 @@ export default function App() {
             <Footer />
           </Router>
         </GameProvider>
-
       </UserProvider>
     </main>
   );
