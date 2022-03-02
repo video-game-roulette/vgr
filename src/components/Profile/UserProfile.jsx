@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2fb743ab1a0bc68dc927a38bbdbe2ec44e5f74eb
 import { Link } from 'react-router-dom';
 import { useUser } from '../../context/UserContext';
 
@@ -14,26 +17,21 @@ export default function UserProfile({ game }) {
       <Link to={`/library/9`}>
         <button className="border-2 border-sky-500">Find A Game</button>
       </Link>
-      <Link to="/library">
-        <button className="border-2 border-sky-500">Game Library</button>
-      </Link>
-      {/* Move to game Library */}
+
       <Link to="/library/addgame">
         <button className="border-2 border-sky-500">Add Game</button>
       </Link>
-
       <div>
         {data.map((item) => (
           <div key={item.id}>
-            <h1>{item.title}</h1>
+            <Link to={`/profile/${item.id}`}>
+              <h1>{item.title}</h1>
+            </Link>
           </div>
         ))}
       </div>
 
-      {/* Delete after Edit works */}
-      <Link to="/library/edit/9">
-        <button className="border-2 border-sky-500">edit</button>
-      </Link>
+
     </div>
   );
 }

@@ -31,7 +31,7 @@ export async function deleteGame(id) {
   return response;
 }
 
-export async function getUserGame(id) {
+export async function getUserGame() {
   const response = await client
     .from('games')
     .select('*')
