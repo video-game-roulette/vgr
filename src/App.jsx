@@ -40,14 +40,14 @@ export default function App() {
               <ProtectedRoute path="/roulette">
                 <Roulette />
               </ProtectedRoute>
+              <ProtectedRoute path="/library/edit/:gameid">
+                <AddEdit isAdding />
+              </ProtectedRoute>
               <ProtectedRoute path="/library/addgame">
                 <AddEdit />
               </ProtectedRoute>
               <ProtectedRoute path="/library/:gameid">
                 <Game />
-              </ProtectedRoute>
-              <ProtectedRoute path="/library/edit/:gameid">
-                <AddEdit />
               </ProtectedRoute>
               <ProtectedRoute path="/library">
                 <Library />
