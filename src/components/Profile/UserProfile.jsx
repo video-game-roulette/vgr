@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 import { useUser } from '../../context/UserContext';
 
@@ -21,7 +20,6 @@ export default function UserProfile({ game }) {
       <Link to="/library/addgame">
         <button className="border-2 border-sky-500">Add Game</button>
       </Link>
-
       <div>
         {data.map((item) => (
           <div key={item.id}>
@@ -29,7 +27,6 @@ export default function UserProfile({ game }) {
           </div>
         ))}
       </div>
-
       {/* Delete after Edit works */}
       <Link to="/library/edit/9">
         <button className="border-2 border-sky-500">edit</button>
