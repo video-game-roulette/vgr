@@ -18,6 +18,7 @@ export default function App() {
   return (
     <main>
       <UserProvider>
+
         <GameProvider>
           <Router>
             <Header />
@@ -56,6 +57,7 @@ export default function App() {
             <Footer />
           </Router>
         </GameProvider>
+
       </UserProvider>
     </main>
   );
