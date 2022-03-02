@@ -2,14 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import useForm from '../../hooks/useForm';
 
-export default function GameForm({ onSubmit, title, label = 'Authenticate' }) {
+export default function GameForm({ game, onSubmit, label = 'Authenticate' }) {
   const { formState, formError, handleFormChange, setFormError } = useForm({
-    title: '',
-    description: '',
-    image: '',
+    title: game?.title || '',
+    description: game?.description || '',
+    image: game?.image || '',
   });
-
-  console.log('title', title);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,6 +25,7 @@ export default function GameForm({ onSubmit, title, label = 'Authenticate' }) {
   return (
     <>
       <form onSubmit={handleSubmit}>
+        <legend>{label}</legend>
         <section>
           <label htmlFor="title">Title: </label>
           <input
@@ -58,7 +57,7 @@ export default function GameForm({ onSubmit, title, label = 'Authenticate' }) {
             onChange={handleFormChange}
           />
         </section>
-        <button>Add Game</button>
+        <button>{label}</button>
         {formError && <p>{formError}</p>}
       </form>
       <Link to="/library">Back to Library</Link>
