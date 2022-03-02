@@ -11,13 +11,13 @@ export default function Header() {
     <>
       <header className="header">
         <Link to="/" className="homelink">
-          <p className="bg-red-600">VGR</p>
+          <p className="font-black text-slate-200">VGR</p>
         </Link>
 
         {user?.email ? (
           <p className="text-slate-200">Signed in as {user?.email}</p>
         ) : (
-          <p className="text-slate-200">Not Signed In</p>
+          <p className="text-slate-200 block font-bold mb-2">Not Signed In</p>
         )}
         {user?.email ? (
           <button
@@ -31,7 +31,9 @@ export default function Header() {
           </button>
         ) : (
           <Link to="/login">
-            <button className="w-70 text-slate-200">Sign In</button>
+            <button className="w-70 text-slate-200 block font-bold mb-2">
+              Sign In
+            </button>
           </Link>
         )}
       </header>
