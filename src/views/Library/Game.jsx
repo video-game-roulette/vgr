@@ -1,7 +1,10 @@
 import React from 'react';
+import GameDetails from '../../components/Library/GameDetails';
 
-const Game = () => {
-  return <div></div>;
-};
-
-export default Game;
+export default function Game() {
+  return (
+    <div>
+      <GameDetails />
+    </div>
+  );
+}
