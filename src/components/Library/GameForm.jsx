@@ -9,8 +9,6 @@ export default function GameForm({ onSubmit, title, label = 'Authenticate' }) {
     image: '',
   });
 
-  console.log('title', title);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { title, description, image } = formState;

@@ -7,14 +7,12 @@ import { fetchGames } from '../../services/game';
 export default function Profile() {
   const [games, setGames] = useState([]);
   const [loading, setLoading] = useState(true);
-  console.log('games', games);
 
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchGames();
       setGames(data);
       setLoading(false);
-      console.log('data', data);
     };
     fetchData();
   }, []);

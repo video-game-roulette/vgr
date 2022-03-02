@@ -5,7 +5,6 @@ import { useUser } from '../../context/UserContext';
 
 export default function UserProfile({ games }) {
   const { user } = useUser();
-  console.log('games', games);
 
   return (
     <div>
@@ -20,26 +19,19 @@ export default function UserProfile({ games }) {
       <Link to="/library/addgame">
         <button className="border-2 border-sky-500">Add Game</button>
       </Link>
-<<<<<<< HEAD
-=======
 
-      <div>
+      {/* <div>
         {games.map((game) => (
           <div key={game.id}>
             <h1>{game.title}</h1>
           </div>
         ))}
-      </div>
+      </div> */}
 
->>>>>>> 41f9d220cc1310e795b3fabe208d31b7012729e5
       {/* Delete after Edit works */}
       <Link to="/library/edit/9">
         <button className="border-2 border-sky-500">edit</button>
       </Link>
-<<<<<<< HEAD
-=======
-
->>>>>>> 41f9d220cc1310e795b3fabe208d31b7012729e5
     </div>
   );
 }
