@@ -36,9 +36,6 @@ export default function App() {
               <Route path="/profile">
                 <Profile />
               </Route>
-              <Route path="/roulette">
-                <Roulette />
-              </Route>
               <Route path="/library/addgame">
                 <AddEdit />
               </Route>
