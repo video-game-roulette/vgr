@@ -6,6 +6,10 @@ import { signOutUser } from '../../services/user';
 
 export default function Header() {
   const { user, setUser } = useUser();
+  const handleLogout = () => {
+    signOutUser();
+    setUser({});
+  };
 
   return (
     <>
@@ -13,7 +17,6 @@ export default function Header() {
         <Link to="/" className="homelink">
           <p className="font-black text-slate-200">VGR</p>
         </Link>
-
         {user ? (
           <p className="signedas">Signed in as {user}</p>
         ) : (
@@ -21,11 +24,7 @@ export default function Header() {
         )}
         {user ? (
           <Link to="/">
-            <button
-              className="w-70 text-slate-200"
-              onClick="signOutUser()"
-              // setUser({});
-            >
+            <button className="w-70 text-slate-200" onClick={handleLogout}>
               Sign Out
             </button>
           </Link>
