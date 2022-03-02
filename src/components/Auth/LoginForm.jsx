@@ -1,19 +1,14 @@
 import './Loginform.css';
-import React, { useEffect } from 'react';
+import React from 'react';
 import useForm from '../../hooks/useForm';
 import { Link } from 'react-router-dom';
 
-export default function LoginForm({
-  className = '',
-  onSubmit,
-  label = 'Authenticate',
-}) {
+export default function LoginForm({ onSubmit, label = 'Authenticate' }) {
   const { formState, formError, handleFormChange, setFormError } = useForm({
     email: '',
+
     password: '',
   });
-
-  useEffect(() => {}, [label]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,7 +17,7 @@ export default function LoginForm({
     try {
       setFormError('');
       if (!email || password.length < 8)
-        throw new Error('Email & Password has to be 8+ characters');
+        throw new Error('email & Password has to be 8+ characters');
       await onSubmit(email, password);
     } catch (error) {
       setFormError(error.message);
@@ -31,22 +26,20 @@ export default function LoginForm({
 
   return (
     <>
-      <h2>Sign In Form</h2>
-      <form className={className} onSubmit={handleSubmit}>
-        <legend>{label}</legend>
+      <form
+        className="bg-white shadow-md rounded py-4 px-4"
+        onSubmit={handleSubmit}
+      >
+        <legend className="text-sm font-bold ">{label}</legend>
         <section>
-          <label htmlFor="username">Username: </label>
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="email"
+          >
+            email:{' '}
+          </label>
           <input
-            id="username"
-            type="username"
-            name="username"
-            value={formState.username}
-            onChange={handleFormChange}
-          />
-        </section>
-        <section>
-          <label htmlFor="email">Email: </label>
-          <input
+            className="shadow appearance-none border rounded w-full py-1 px-1 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             id="email"
             type="email"
             name="email"
@@ -55,8 +48,14 @@ export default function LoginForm({
           />
         </section>
         <section>
-          <label htmlFor="password">Password: </label>
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="password"
+          >
+            Password:{' '}
+          </label>
           <input
+            className="shadow appearance-none border rounded w-full py-1 px-1 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             id="password"
             type="password"
             name="password"
@@ -64,10 +63,17 @@ export default function LoginForm({
             onChange={handleFormChange}
           />
         </section>
-        <button className="formbutton">Sign In</button>
+        <button className="bg-blue-500 hover:bg-blue-700 py-0.3 text-white font-bold rounded focus:outline-none focus:shadow-outline">
+          Sign In
+        </button>
         {formError && <p>{formError}</p>}
       </form>
-      <Link to="/">Back to Home</Link>
+
+      <button className="bg-slate-400 rounded absolute left-80  ">
+        <Link className="text-black font-bold " to="/">
+          Back to Home
+        </Link>
+      </button>
       <hr></hr>
     </>
   );

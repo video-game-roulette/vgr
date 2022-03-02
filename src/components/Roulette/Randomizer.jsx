@@ -1,14 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useUser } from '../../context/UserContext';
+import { useGame } from '../../context/GameContext';
+import { getGamesById } from '../../services/game';
 
 export default function Randomizer() {
+  const { game, setGame } = useGame();
+  const { title, description, image } = game;
+  const { user } = useUser();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchRandomGame = async () => {
+      const resp = await getGamesById(user);
+      setGame(resp);
+      setLoading(false);
+    };
+    fetchRandomGame();
+  }, []);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
   return (
     <div className="randomizer">
-      <h1>You Shoulda Play:</h1>
-      <h2>gametitle</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/46/River_City_Ransom-front.jpg/220px-River_City_Ransom-front.jpg" />
-      <p>categories holder</p>
-      <p>price holder</p>
-      <p>review holder</p>
+      <h1>You Should Play: {title}</h1>
+      <img src={image} alt={title} />
+      <p>{description}</p>
     </div>
   );
 }
