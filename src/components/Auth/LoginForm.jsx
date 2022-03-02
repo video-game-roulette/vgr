@@ -31,7 +31,6 @@ export default function LoginForm({ onSubmit, label = 'Authenticate' }) {
         className="bg-white shadow-md rounded py-4 px-4"
         onSubmit={handleSubmit}
       >
-
         <legend className="text-sm font-bold ">{label}</legend>
 
         <section>
@@ -68,7 +67,6 @@ export default function LoginForm({ onSubmit, label = 'Authenticate' }) {
         </section>
 
         <button className="bg-blue-500 hover:bg-blue-700 py-0.3 text-white font-bold rounded focus:outline-none focus:shadow-outline">
-
           Sign In
         </button>
         {formError && <p>{formError}</p>}

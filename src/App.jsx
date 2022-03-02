@@ -4,7 +4,6 @@ import Home from './views/Home/Home';
 import Header from './components/Layout/Header';
 import Footer from './components/Layout/Footer';
 import Login from './views/Auth/Login';
-
 import About from './views/AboutUs/About';
 import Profile from './views/Profile/Profile';
 import Roulette from './views/Roulette/Roulette';
@@ -13,6 +12,7 @@ import Game from './views/Library/Game';
 import AddEdit from './views/Library/AddEdit';
 import { UserProvider } from './context/UserContext';
 import { GameProvider } from './context/GameContext';
+import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 
 export default function App() {
   return (
@@ -34,24 +34,22 @@ export default function App() {
               <Route path="/about-us">
                 <About />
               </Route>
-              <Route path="/profile/">
+
+              <ProtectedRoute path="/profile">
                 <Profile />
-              </Route>
-              <Route path="/roulette">
-                <Roulette />
-              </Route>
-              <Route path="/library/addgame">
+              </ProtectedRoute>
+              <ProtectedRoute path="/library/edit/:gameid">
+                <AddEdit isAdding />
+              </ProtectedRoute>
+              <ProtectedRoute path="/library/addgame">
                 <AddEdit />
-              </Route>
-              <Route path="/library">
-                <Library />
-              </Route>
-              <Route path="/library/:gameid">
+              </ProtectedRoute>
+              <ProtectedRoute path="/library/:gameid">
                 <Game />
-              </Route>
-              <Route path="/library/edit/:gameid">
-                <AddEdit />
-              </Route>
+              </ProtectedRoute>
+              <ProtectedRoute path="/library">
+                <Library />
+              </ProtectedRoute>
             </Switch>
             <Footer />
           </Router>
