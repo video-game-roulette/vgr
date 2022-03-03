@@ -1,5 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useGame } from '../../context/GameContext';
+import { Link, useParams } from 'react-router-dom';
+import { getGamesById } from '../../services/game';
 
 export default function GameDetails() {
-  return <div>GameDetails</div>;
+  const { game, setGame } = useGame();
+  const { gameid } = useParams();
+  const data = game.data;
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const resp = await getGamesById(gameid);
+      setGame(resp);
+      setLoading(false);
+    };
+    fetchData();
+  }, [gameid]);
+
+  if (loading) {
+    return <h1>please wait </h1>;
+  }
+
+  console.log('game', game);
+  return (
+    <div>
+      <h1>{data.title}</h1>
+      <img src={data.image} />
+      <h3>{data.description}</h3>
+      <button>
+        <Link to={`/library/edit/${data.id}`}>edit</Link>
+      </button>
+    </div>
+  );
 }
