@@ -5,7 +5,10 @@ import { useUser } from '../../context/UserContext';
 export default function UserProfile({ game }) {
   const { user } = useUser();
   const data = game.data;
-  console.log('games', game);
+
+  //Randomizer Function
+  const random = Math.floor(Math.random() * data.length);
+  const randomGame = data[random].id;
 
   const random = Math.floor(Math.random() * data.length);
   const randomGame = data[random].id;
