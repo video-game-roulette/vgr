@@ -12,10 +12,6 @@ export default function LoginForm({ onSubmit, label = 'Authenticate' }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-<<<<<<< HEAD
-
-=======
->>>>>>> 2fb743ab1a0bc68dc927a38bbdbe2ec44e5f74eb
     const { email, password } = formState;
 
     try {
