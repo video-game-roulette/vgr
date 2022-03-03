@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-=======
->>>>>>> 2fb743ab1a0bc68dc927a38bbdbe2ec44e5f74eb
 import { Link } from 'react-router-dom';
 import { useUser } from '../../context/UserContext';
 
