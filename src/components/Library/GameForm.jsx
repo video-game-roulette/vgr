@@ -57,7 +57,7 @@ export default function GameForm({ game, onSubmit, label = 'Authenticate' }) {
             onChange={handleFormChange}
           />
         </section>
-        <button>{label}</button>
+        <button>Save Game</button>
         {formError && <p>{formError}</p>}
       </form>
       <Link to="/profile">Back to Profile</Link>
