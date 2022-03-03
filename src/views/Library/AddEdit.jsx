@@ -35,9 +35,6 @@ export default function AddEdit({ isAdding = false }) {
         history.replace(`/profile/`);
       } else {
         await updateGame(gameid, title, description, image);
-        setTitle(addGame.title);
-        setDescription(addGame.description);
-        setImage(addGame.image);
         history.replace(`/profile/${gameid}`);
       }
     } catch (error) {
