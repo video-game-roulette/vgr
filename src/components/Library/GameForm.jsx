@@ -60,7 +60,7 @@ export default function GameForm({ game, onSubmit, label = 'Authenticate' }) {
         <button>{label}</button>
         {formError && <p>{formError}</p>}
       </form>
-      <Link to="/library">Back to Library</Link>
+      <Link to="/profile">Back to Profile</Link>
     </>
   );
 }
