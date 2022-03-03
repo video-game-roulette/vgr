@@ -6,18 +6,10 @@ import GameForm from '../../components/Library/GameForm';
 import { addGame, getGamesById, updateGame } from '../../services/game';
 
 export default function AddEdit({ isAdding = false }) {
-  // const [title, setTitle] = useState();
-  // const [image, setImage] = useState();
-  // const [description, setDescription] = useState();
-  // const [input, setInput] = useState({ title: '', description: '', image: '' });
   const [game, setGame] = useState({ title: '', description: '', image: '' });
   const [loading, setLoading] = useState(true);
   const history = useHistory();
   const { gameid } = useParams();
-
-  // useEffect(() => {
-  //   setInput(game.data);
-  // }, [game.data]);
 
   useEffect(() => {
     const fetchData = async () => {
