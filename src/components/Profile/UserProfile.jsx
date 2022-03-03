@@ -30,8 +30,6 @@ export default function UserProfile({ game }) {
           </div>
         ))}
       </div>
-
-
     </div>
   );
 }
