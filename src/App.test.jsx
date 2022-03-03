@@ -8,13 +8,13 @@ import userEvent from '@testing-library/user-event';
 test('Testing if homepage renders all the correct content in both the header and the body', () => {
   // const container =
   render(
-    <MemoryRouter>
-      <UserProvider>
-        <GameProvider>
+    <UserProvider>
+      <GameProvider>
+        <MemoryRouter>
           <App />
-        </GameProvider>
-      </UserProvider>
-    </MemoryRouter>
+        </MemoryRouter>
+      </GameProvider>
+    </UserProvider>
   );
 
   const logo = screen.getByText(/vgr/i);
@@ -38,13 +38,13 @@ test('Testing if homepage renders all the correct content in both the header and
 test('testing the view of the login page', () => {
   //const container =
   render(
-    <MemoryRouter>
-      <UserProvider>
-        <GameProvider>
+    <UserProvider>
+      <GameProvider>
+        <MemoryRouter>
           <App />
-        </GameProvider>
-      </UserProvider>
-    </MemoryRouter>
+        </MemoryRouter>
+      </GameProvider>
+    </UserProvider>
   );
   const firstSignInBtn = screen.getByRole('button', {
     name: /header sign in/i,
@@ -70,13 +70,13 @@ test('testing the view of the login page', () => {
 test('testing the view for the signup page', () => {
   // const container =
   render(
-    <MemoryRouter>
-      <UserProvider>
-        <GameProvider>
+    <UserProvider>
+      <GameProvider>
+        <MemoryRouter>
           <App />
-        </GameProvider>
-      </UserProvider>
-    </MemoryRouter>
+        </MemoryRouter>
+      </GameProvider>
+    </UserProvider>
   );
 
   const firstSignInBtn = screen.getByRole('button', {
@@ -104,13 +104,13 @@ test('testing the view for the signup page', () => {
 test('testing that the about us page renders', () => {
   // const container =
   render(
-    <MemoryRouter>
-      <UserProvider>
-        <GameProvider>
+    <UserProvider>
+      <GameProvider>
+        <MemoryRouter>
           <App />
-        </GameProvider>
-      </UserProvider>
-    </MemoryRouter>
+        </MemoryRouter>
+      </GameProvider>
+    </UserProvider>
   );
 
   const footer = screen.getByRole('link', { name: /about us/i });
@@ -137,13 +137,13 @@ test('testing that the about us page renders', () => {
 test('testing login functionality and the profile view', async () => {
   // const container =
   render(
-    <MemoryRouter>
-      <UserProvider>
-        <GameProvider>
+    <UserProvider>
+      <GameProvider>
+        <MemoryRouter>
           <App />
-        </GameProvider>
-      </UserProvider>
-    </MemoryRouter>
+        </MemoryRouter>
+      </GameProvider>
+    </UserProvider>
   );
 
   const signInBtn = screen.getByRole('button', { name: /header sign in/i });
@@ -187,13 +187,13 @@ test('testing login functionality and the profile view', async () => {
 test('testing the functionality of going to our game details page and the view on that page', async () => {
   // const container =
   render(
-    <MemoryRouter>
-      <UserProvider>
-        <GameProvider>
+    <UserProvider>
+      <GameProvider>
+        <MemoryRouter>
           <App />
-        </GameProvider>
-      </UserProvider>
-    </MemoryRouter>
+        </MemoryRouter>
+      </GameProvider>
+    </UserProvider>
   );
 
   const signInBtn = screen.getByRole('button', { name: /header sign in/i });
@@ -232,13 +232,13 @@ test('testing the functionality of going to our game details page and the view o
 test('testing that the add btn works and renders the add game form', async () => {
   // const container =
   render(
-    <MemoryRouter>
-      <UserProvider>
-        <GameProvider>
+    <UserProvider>
+      <GameProvider>
+        <MemoryRouter>
           <App />
-        </GameProvider>
-      </UserProvider>
-    </MemoryRouter>
+        </MemoryRouter>
+      </GameProvider>
+    </UserProvider>
   );
 
   const signInBtn = screen.getByRole('button', { name: /header sign in/i });
@@ -277,13 +277,13 @@ test('testing that the add btn works and renders the add game form', async () =>
 test('testing that the edit btn brings you to the edit view', async () => {
   // const container =
   render(
-    <MemoryRouter>
-      <UserProvider>
-        <GameProvider>
+    <UserProvider>
+      <GameProvider>
+        <MemoryRouter>
           <App />
-        </GameProvider>
-      </UserProvider>
-    </MemoryRouter>
+        </MemoryRouter>
+      </GameProvider>
+    </UserProvider>
   );
 
   const signInBtn = screen.getByRole('button', { name: /header sign in/i });
@@ -324,13 +324,13 @@ test('testing that the edit btn brings you to the edit view', async () => {
 
 test('testing the find a game view', async () => {
   render(
-    <MemoryRouter>
-      <UserProvider>
-        <GameProvider>
+    <UserProvider>
+      <GameProvider>
+        <MemoryRouter>
           <App />
-        </GameProvider>
-      </UserProvider>
-    </MemoryRouter>
+        </MemoryRouter>
+      </GameProvider>
+    </UserProvider>
   );
 
   const signInBtn = screen.getByRole('button', { name: /header sign in/i });
