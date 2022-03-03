@@ -7,10 +7,13 @@ export default function UserProfile({ game }) {
   const data = game.data;
   console.log('games', game);
 
+  const random = Math.floor(Math.random() * data.length);
+  const randomGame = data[random].id;
+
   return (
     <div>
       <h1>Welcome {user}</h1>
-      <Link to={`/library/9`}>
+      <Link to={`/profile/${randomGame}`}>
         <button className="border-2 border-sky-500">Find A Game</button>
       </Link>
 
