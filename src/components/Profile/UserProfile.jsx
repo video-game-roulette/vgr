@@ -10,9 +10,6 @@ export default function UserProfile({ game }) {
   const random = Math.floor(Math.random() * data.length);
   const randomGame = data[random].id;
 
-  const random = Math.floor(Math.random() * data.length);
-  const randomGame = data[random].id;
-
   return (
     <div>
       <h1>Welcome {user}</h1>

@@ -26,12 +26,11 @@ export default function GameDetails() {
     return <h1>please wait </h1>;
   }
 
-  console.log('game', game);
   return (
     <div>
-      <h1>{data.title}</h1>
-      <img src={data.image} />
-      <h3>{data.description}</h3>
+      <h1 aria-label="game title">{data.title}</h1>
+      <img src={data.image} aria-label="game image" />
+      <h3 aria-label="game description">{data.description}</h3>
       <button>
         <Link to={`/library/edit/${data.id}`}>edit</Link>
       </button>
