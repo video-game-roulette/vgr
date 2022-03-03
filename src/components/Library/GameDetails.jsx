@@ -19,16 +19,13 @@ export default function GameDetails() {
     fetchData();
   }, [gameid]);
 
-
   const handleDelete = () => {
     deleteGame(data.id);
   };
 
-
   if (loading) {
     return <h1>please wait </h1>;
   }
-
 
   return (
     <div>
