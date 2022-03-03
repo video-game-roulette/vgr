@@ -30,11 +30,11 @@ export default function Login({ isSigningUp = false }) {
         label={isSigningUp ? 'Sign Up' : 'Sign In'}
       />
       {isSigningUp ? (
-        <p>
+        <p className="text-slate-200 text-center">
           Already have an account? <Link to="/login">Sign In</Link>
         </p>
       ) : (
-        <p className="text-slate-200">
+        <p className="text-slate-200 text-center">
           Need an account? <Link to="/signup">Sign Up</Link>
         </p>
       )}
