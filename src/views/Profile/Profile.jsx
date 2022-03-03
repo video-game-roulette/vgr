@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import UserProfile from '../../components/Profile/UserProfile';
 import { useGame } from '../../context/GameContext';
-import { fetchGames, getUserGame } from '../../services/game';
+import { getUserGame } from '../../services/game';
 
 export default function Profile() {
   const { game, setGame } = useGame();
   const [loading, setLoading] = useState(true);
+
+  console.log('game', game);
 
   useEffect(() => {
     const fetchData = async () => {
