@@ -41,7 +41,7 @@ export default function AddEdit({ isAdding = false }) {
     } catch (error) {
       throw error;
     } finally {
-      history.replace('/library');
+      history.replace(`/profile/${gameid}`);
     }
   };
 
