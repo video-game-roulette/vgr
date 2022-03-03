@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useGame } from '../../context/GameContext';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useHistory, useParams } from 'react-router-dom';
 
 import { deleteGame, getGamesById } from '../../services/game';
 
@@ -9,6 +9,7 @@ export default function GameDetails() {
   const { gameid } = useParams();
   const data = game.data;
   const [loading, setLoading] = useState(true);
+  const history = useHistory();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,16 +20,14 @@ export default function GameDetails() {
     fetchData();
   }, [gameid]);
 
-
-  const handleDelete = () => {
-    deleteGame(data.id);
+  const handleDelete = async () => {
+    await deleteGame(data.id);
+    history.push('/profile');
   };
-
 
   if (loading) {
     return <h1>please wait </h1>;
   }
-
 
   return (
     <div>
@@ -39,7 +38,8 @@ export default function GameDetails() {
         <Link to={`/library/edit/${data.id}`}>edit</Link>
       </button>
       <button onClick={handleDelete}>
-        <Link to="/profile">Delete Game</Link>
+        {/* <Link to="/profile">Delete Game</Link> */}
+        Delete Game
       </button>
     </div>
   );

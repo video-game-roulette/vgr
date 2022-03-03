@@ -7,7 +7,7 @@ export default function Header() {
   const { user, setUser } = useUser();
   const handleLogout = () => {
     signOutUser();
-    setUser({});
+    setUser();
   };
 
   return (
