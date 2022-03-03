@@ -412,6 +412,57 @@ test('testing the find a game view', async () => {
 // });
 
 // test('testing that our delete btn deletes a game', async () => {
+
+//   render(
+//     <MemoryRouter>
+//       <UserProvider>
+//         <GameProvider>
+//           <App />
+//         </GameProvider>
+//       </UserProvider>
+//     </MemoryRouter>
+//   );
+
+//   const signInBtn = screen.getByRole('button', { name: /header sign in/i });
+//   userEvent.click(signInBtn);
+
+//   const emailInput = screen.getByRole('textbox', { name: /email:/i });
+//   const email = 'ajoy267@gmail.com';
+//   userEvent.type(emailInput, email);
+
+//   const passwordInput = screen.getByLabelText(/password:/i);
+//   const password = '12345678';
+//   userEvent.type(passwordInput, password);
+
+//   const signinFormBtn = screen.getByRole('button', { name: /sign in button/i });
+//   userEvent.click(signinFormBtn);
+
+//   const addGameBtn = await screen.findByRole('button', { name: /add game/i });
+//   userEvent.click(addGameBtn);
+
+//   const titleInput = await screen.findByRole('textbox', { name: /title:/i });
+//   const title = 'Gta';
+//   userEvent.type(titleInput, title);
+
+//   const descriptionInput = screen.getByRole('textbox', {
+//     name: /description:/i,
+//   });
+//   const description = 'its a game';
+//   userEvent.type(descriptionInput, description);
+
+//   const imgInput = screen.getByRole('textbox', { name: /image link:/i });
+//   const img = 'this is an image';
+//   userEvent.type(imgInput, img);
+
+//   const saveGame = screen.getByRole('button', { name: /save game/i });
+//   userEvent.click(saveGame);
+
+//   const newGame = await screen.findByRole('heading', { name: /gta/i });
+
+//   expect(newGame).toBeInTheDocument();
+// });
+
+// test('testing that our delete btn deletes a game', async () => {
 //   render(
 //     <MemoryRouter>
 //       <UserProvider>
