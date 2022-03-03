@@ -150,6 +150,7 @@ test('testing the view for the signup page', () => {
   expect(signinFormBtn).toBeInTheDocument();
   expect(signinQuestion).toBeInTheDocument();
   expect(backHome).toBeInTheDocument();
+  // expect(container).toMatchSnapshot();
 });
 
 // test('testing mockauth', () => {
