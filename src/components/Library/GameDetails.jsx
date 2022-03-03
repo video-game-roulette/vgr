@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useGame } from '../../context/GameContext';
 import { Link, useParams } from 'react-router-dom';
+
 import { deleteGame, getGamesById } from '../../services/game';
 
 export default function GameDetails() {
@@ -18,13 +19,16 @@ export default function GameDetails() {
     fetchData();
   }, [gameid]);
 
+
   const handleDelete = () => {
     deleteGame(data.id);
   };
 
+
   if (loading) {
     return <h1>please wait </h1>;
   }
+
 
   return (
     <div>
