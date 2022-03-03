@@ -5,14 +5,17 @@ import { useUser } from '../../context/UserContext';
 export default function UserProfile({ game }) {
   const { user } = useUser();
   const data = game.data;
-  console.log('games', game);
+
+  //Randomizer Function
+  const random = Math.floor(Math.random() * data.length);
+  const randomGame = data[random].id;
 
   return (
     <div>
       <h1 className="font-extrabold text-slate-100 flex justify-center">
         Welcome {user}
       </h1>
-      <Link to={`/library/9`}>
+      <Link to={`/profile/${randomGame}`}>
         <button className="bg-slate-100 rounded-md font-bold text-blue-600 px-1 ">
           Find A Game
         </button>

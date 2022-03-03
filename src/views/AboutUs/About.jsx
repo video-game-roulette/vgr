@@ -24,8 +24,10 @@ export default function About() {
         <h2>Andrew</h2>
       </Link>
       <p>
-        Switching from being an Amatuer Pro Triathlete to a Fullstack Developer
-        in Beaverton, OR.
+        From Amatuer Pro Triathlete to a Fullstack Developer base in Portland,
+        OR, Andrew was instrumental in the team sucessefully completeing the
+        project on time, and above expectation. Core design principles and a
+        tailwind styler, Andrew helped create the overall style of the App.
       </p>
       <br></br>
       <Link
@@ -42,9 +44,10 @@ export default function About() {
       </Link>
       <p>
         THE up and coming Software Developer from Miami, Florida. Mark built out
-        functional buttons that communicated with the database, CSS, and edit
-        products. Mark’s mind is designed to understand development at a
-        fundamental level and is a solid and reliable member of the team
+        functional buttons that communicated with the database and handled
+        profile information and style. Mark’s mind is designed to understand
+        development at a fundamental level and is a solid and reliable member of
+        the team.
       </p>
       <br></br>
       <Link
@@ -58,10 +61,10 @@ export default function About() {
         <h2>Chase</h2>
       </Link>
       <p>
-        The sole Developer based in Portland of the group. Chase’s big dreams
-        become reality to his attention to detail and making sure no corners are
-        cut. Chase worked extensively in connecting the database to the project
-        through search implementation and routing in the nav bars.
+        Based in Portland, Chase’s big dreams become reality to his attention to
+        detail and making sure no corners are cut. Chase was the team member
+        that had everyone's back. He provided the final piece of the puzzle to
+        solve many coding barriers.
       </p>
       <br></br>
       <br></br>
@@ -76,11 +79,9 @@ export default function About() {
         <h2>Brettford</h2>
       </Link>
       <p>
-        The other PNW developer who worked on Routing, Edit Products, and this
-        page you’re reading right now! As a father and a developer, Brettford
-        couldn’t ask for more. Also, as a veteran, utilizing his experience in
-        planning and coordination, he helped keep the project on track, hitting
-        all the checkpoints to deliver an MVP project on time.
+        The other PNW developer who worked on Routing, communication with the
+        Data base, and this page you’re reading right now! As a father, veteran,
+        and Full-Stack developer, Brettford couldn’t ask for more.
       </p>
     </div>
   );

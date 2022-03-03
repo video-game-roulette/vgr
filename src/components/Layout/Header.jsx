@@ -35,7 +35,10 @@ export default function Header() {
         </Link>
       ) : (
         <Link to="/login">
-          <button className="w-70 text-slate-200 block font-bold ml-10 text-xl border-4 border-black p-1">
+          <button
+            aria-label="header sign in"
+            className="w-70 text-slate-200 block font-bold ml-10 text-xl border-4 border-black p-1"
+          >
             Sign In
           </button>
         </Link>

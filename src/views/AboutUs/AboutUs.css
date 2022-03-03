@@ -1,3 +1,7 @@
+body {
+  height: 201vh;
+}
+
 .pfp {
   border-radius: 50%;
   max-width: 25%;
