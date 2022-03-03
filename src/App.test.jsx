@@ -101,6 +101,39 @@ test('testing the view for the signup page', () => {
   // expect(container).toMatchSnapshot();
 });
 
+test('testing that the about us page renders', () => {
+  // const container =
+  render(
+    <MemoryRouter>
+      <UserProvider>
+        <GameProvider>
+          <App />
+        </GameProvider>
+      </UserProvider>
+    </MemoryRouter>
+  );
+
+  const footer = screen.getByRole('link', { name: /about us/i });
+  userEvent.click(footer);
+
+  const heading = screen.getByRole('heading', { name: /about the creators/i });
+  const andrew = screen.getByRole('heading', { name: /andrew/i });
+  const andrewInfo = screen.getByText(
+    /from amatuer pro triathlete to a fullstack developer base in portland, or, andrew was instrumental in the team sucessefully completeing the project on time, and above expectation\. core design principles and a tailwind styler, andrew helped create the overall style of the app\./i
+  );
+  const mark = screen.getByRole('heading', { name: /mark/i });
+  const markInfo = screen.getByText(
+    /the up and coming software developer from miami, florida\. mark built out functional buttons that communicated with the database and handled profile information and style\. mark’s mind is designed to understand development at a fundamental level and is a solid and reliable member of the team\./i
+  );
+
+  expect(heading).toBeInTheDocument();
+  expect(andrew).toBeInTheDocument();
+  expect(andrewInfo).toBeInTheDocument();
+  expect(mark).toBeInTheDocument();
+  expect(markInfo).toBeInTheDocument();
+  // expect(container).toMatchSnapshot();
+});
+
 test('testing login functionality and the profile view', async () => {
   // const container =
   render(
@@ -289,8 +322,7 @@ test('testing that the edit btn brings you to the edit view', async () => {
   // expect(container).toMatchSnapshot();
 });
 
-test('testing that the about us page renders', () => {
-  // const container =
+test('testing the find a game view', async () => {
   render(
     <MemoryRouter>
       <UserProvider>
@@ -301,25 +333,32 @@ test('testing that the about us page renders', () => {
     </MemoryRouter>
   );
 
-  const footer = screen.getByRole('link', { name: /about us/i });
-  userEvent.click(footer);
+  const signInBtn = screen.getByRole('button', { name: /header sign in/i });
+  userEvent.click(signInBtn);
 
-  const heading = screen.getByRole('heading', { name: /about the creators/i });
-  const andrew = screen.getByRole('heading', { name: /andrew/i });
-  const andrewInfo = screen.getByText(
-    /from amatuer pro triathlete to a fullstack developer base in portland, or, andrew was instrumental in the team sucessefully completeing the project on time, and above expectation\. core design principles and a tailwind styler, andrew helped create the overall style of the app\./i
-  );
-  const mark = screen.getByRole('heading', { name: /mark/i });
-  const markInfo = screen.getByText(
-    /the up and coming software developer from miami, florida\. mark built out functional buttons that communicated with the database and handled profile information and style\. mark’s mind is designed to understand development at a fundamental level and is a solid and reliable member of the team\./i
-  );
+  const emailInput = screen.getByRole('textbox', { name: /email:/i });
+  const email = 'ajoy267@gmail.com';
+  userEvent.type(emailInput, email);
 
-  expect(heading).toBeInTheDocument();
-  expect(andrew).toBeInTheDocument();
-  expect(andrewInfo).toBeInTheDocument();
-  expect(mark).toBeInTheDocument();
-  expect(markInfo).toBeInTheDocument();
-  // expect(container).toMatchSnapshot();
+  const passwordInput = screen.getByLabelText(/password:/i);
+  const password = '12345678';
+  userEvent.type(passwordInput, password);
+
+  const signinFormBtn = screen.getByRole('button', { name: /sign in button/i });
+  userEvent.click(signinFormBtn);
+
+  const findGame = await screen.findByRole('button', { name: /find a game/i });
+  userEvent.click(findGame);
+
+  const gameTitle = await screen.findByRole('heading', { name: /game title/i });
+  const gameImg = screen.getByRole('img', { name: /game image/i });
+  const gameDescription = screen.getByRole('heading', {
+    name: /game description/i,
+  });
+
+  expect(gameTitle).toBeInTheDocument();
+  expect(gameImg).toBeInTheDocument();
+  expect(gameDescription).toBeInTheDocument();
 });
 
 // test('testing that I can add a game', async () => {
