@@ -32,16 +32,16 @@ export default function AddEdit({ isAdding = false }) {
     try {
       if (!isAdding) {
         await addGame(title, description, image);
+        history.replace(`/profile/`);
       } else {
         await updateGame(gameid, title, description, image);
         setTitle(addGame.title);
         setDescription(addGame.description);
         setImage(addGame.image);
+        history.replace(`/profile/${gameid}`);
       }
     } catch (error) {
       throw error;
-    } finally {
-      history.replace(`/profile/${gameid}`);
     }
   };
 
