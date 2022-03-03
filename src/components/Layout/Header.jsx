@@ -27,7 +27,7 @@ export default function Header() {
       {user ? (
         <Link to="/">
           <button
-            className="w-70 text-slate-200 text-xl block font-bold ml-8 border-4 border-black p-1"
+            className="absolute top-0 right-0 mt-4 mr-4  w-70 text-slate-200 text-xl block font-bold ml-8 border-4 border-black p-1"
             onClick={handleLogout}
           >
             Sign Out
@@ -37,7 +37,7 @@ export default function Header() {
         <Link to="/login">
           <button
             aria-label="header sign in"
-            className="w-70 text-slate-200 block font-bold ml-10 text-xl border-4 border-black p-1"
+            className="absolute top-0 right-0 mt-4 mr-4 w-70 text-slate-200 block font-bold ml-10 text-xl border-4 border-black p-1"
           >
             Sign In
           </button>

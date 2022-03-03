@@ -76,7 +76,7 @@ export default function LoginForm({ onSubmit, label = 'Authenticate' }) {
         {formError && <p>{formError}</p>}
       </form>
 
-      <button className="bg-slate-400 rounded absolute left-80  ">
+      <button className="bg-slate-400 rounded absolute left-0  ">
         <Link className="text-black font-bold " to="/">
           Back to Home
         </Link>
