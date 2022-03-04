@@ -11,23 +11,15 @@ export default function Header() {
   };
 
   return (
-    <header className="flex flex-row mt-5">
+    <header className="flex flex-row mt-5 pb-2">
       <Link to="/">
         <p className="font-black text-slate-200 text-2xl ml-5">VGR</p>
       </Link>
-      {user ? (
-        <p className="text-slate-200 block font-bold ml-8 w-40 text-xl">
-          Signed in as {user}
-        </p>
-      ) : (
-        <p className="text-slate-200 block font-bold ml-20 text-xl">
-          Not Signed In
-        </p>
-      )}
+
       {user ? (
         <Link to="/">
           <button
-            className="absolute top-0 right-0 mt-4 mr-4  w-70 text-slate-200 text-xl block font-bold ml-8 border-4 border-black p-1"
+            className="absolute top-0 right-0 mt-4 mr-4 w-70 text-slate-200 block font-bold ml-10 text-xl border-4 bg-indigo-400 rounded p-1"
             onClick={handleLogout}
           >
             Sign Out
@@ -37,7 +29,7 @@ export default function Header() {
         <Link to="/login">
           <button
             aria-label="header sign in"
-            className="absolute top-0 right-0 mt-4 mr-4 w-70 text-slate-200 block font-bold ml-10 text-xl border-4 border-black p-1"
+            className="absolute top-0 right-0 mt-4 mr-4 w-70 text-slate-200 block font-bold ml-10 text-xl border-4 bg-indigo-400 rounded p-1"
           >
             Sign In
           </button>

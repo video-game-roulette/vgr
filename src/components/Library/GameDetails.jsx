@@ -30,14 +30,24 @@ export default function GameDetails() {
   }
 
   return (
-    <div>
-      <h1 aria-label="game title">{data.title}</h1>
-      <img src={data.image} aria-label="game image" />
-      <h3 aria-label="game description">{data.description}</h3>
-      <button>
+    <div className="py-2">
+      <h1
+        className="text-slate-200 text-3xl font-bold "
+        aria-label="game title"
+      >
+        {data.title}
+      </h1>
+      <img className="m-auto" src={data.image} aria-label="game image" />
+      <h3 className="font-bold text-slate-200" aria-label="game description">
+        {data.description}
+      </h3>
+      <button className="flex border-4 mt-5 font-bold bg-indigo-400 m-auto text-slate-200 rounded-md text-2xl p-2 mb-5">
         <Link to={`/library/edit/${data.id}`}>edit</Link>
       </button>
-      <button onClick={handleDelete}>
+      <button
+        className="flex border-4 mt-5 font-bold bg-indigo-400 m-auto text-slate-200 rounded-md text-2xl p-2 mb-5"
+        onClick={handleDelete}
+      >
         {/* <Link to="/profile">Delete Game</Link> */}
         Delete Game
       </button>

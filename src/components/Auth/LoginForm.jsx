@@ -1,7 +1,7 @@
 import './Loginform.css';
 import React from 'react';
 import useForm from '../../hooks/useForm';
-import { Link } from 'react-router-dom';
+
 
 export default function LoginForm({ onSubmit, label = 'Authenticate' }) {
   const { formState, formError, handleFormChange, setFormError } = useForm({
@@ -75,12 +75,6 @@ export default function LoginForm({ onSubmit, label = 'Authenticate' }) {
         </button>
         {formError && <p>{formError}</p>}
       </form>
-
-      <button className="bg-slate-400 rounded absolute left-0  ">
-        <Link className="text-black font-bold " to="/">
-          Back to Home
-        </Link>
-      </button>
     </>
   );
 }

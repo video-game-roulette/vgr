@@ -27,7 +27,9 @@ export default function GameForm({ game, onSubmit, label = 'Authenticate' }) {
       <form onSubmit={handleSubmit}>
         <legend>{label}</legend>
         <section>
-          <label htmlFor="title">Title: </label>
+          <label className="text-slate-200 font-bold" htmlFor="title">
+            Title:{' '}
+          </label>
           <input
             id="title"
             type="text"
@@ -37,7 +39,9 @@ export default function GameForm({ game, onSubmit, label = 'Authenticate' }) {
           />
         </section>
         <section>
-          <label htmlFor="description">Description: </label>
+          <label className="text-slate-200 font-bold" htmlFor="description">
+            Description:{' '}
+          </label>
           <input
             id="description"
             type="text"
@@ -47,7 +51,9 @@ export default function GameForm({ game, onSubmit, label = 'Authenticate' }) {
           />
         </section>
         <section>
-          <label htmlFor="image">Image Link: </label>
+          <label className="text-slate-200 font-bold" htmlFor="image">
+            Image Link:{' '}
+          </label>
           <input
             htmlFor="image"
             id="image"
@@ -57,10 +63,14 @@ export default function GameForm({ game, onSubmit, label = 'Authenticate' }) {
             onChange={handleFormChange}
           />
         </section>
-        <button>Save Game</button>
+        <button className="flex border-4 font-bold bg-indigo-400 m-auto text-slate-200 rounded-md text-2xl p-2 mb-5">
+          Save Game
+        </button>
         {formError && <p>{formError}</p>}
       </form>
-      <Link to="/profile">Back to Profile</Link>
+      <button className="flex border-4 font-bold bg-indigo-400 m-auto text-slate-200 rounded-md text-2xl p-2 mb-5">
+        <Link to="/profile">Back to Profile</Link>
+      </button>
     </>
   );
 }
