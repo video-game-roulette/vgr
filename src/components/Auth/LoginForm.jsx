@@ -1,7 +1,6 @@
 import './Loginform.css';
 import React from 'react';
 import useForm from '../../hooks/useForm';
-import { Link } from 'react-router-dom';
 
 export default function LoginForm({ onSubmit, label = 'Authenticate' }) {
   const { formState, formError, handleFormChange, setFormError } = useForm({
@@ -36,13 +35,14 @@ export default function LoginForm({ onSubmit, label = 'Authenticate' }) {
             className="block text-gray-700 text-sm font-bold mb-2"
             htmlFor="email"
           >
-            email:{' '}
+            email:
           </label>
           <input
             className="shadow appearance-none border rounded w-full py-1 px-1 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             id="email"
             type="email"
             name="email"
+            placeholder="email"
             value={formState.email}
             onChange={handleFormChange}
           />
@@ -51,30 +51,29 @@ export default function LoginForm({ onSubmit, label = 'Authenticate' }) {
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
             htmlFor="password"
+            aria-label="password"
           >
-            Password:{' '}
+            Password:
           </label>
           <input
             className="shadow appearance-none border rounded w-full py-1 px-1 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             id="password"
             type="password"
             name="password"
+            placeholder="password"
             value={formState.password}
             onChange={handleFormChange}
           />
         </section>
-        <button className="bg-blue-500 hover:bg-blue-700 py-0.3 text-white font-bold rounded focus:outline-none focus:shadow-outline">
+        <button
+          type="submit"
+          aria-label="sign in button"
+          className="bg-blue-500 hover:bg-blue-700 py-0.3 text-white font-bold rounded focus:outline-none focus:shadow-outline"
+        >
           Sign In
         </button>
         {formError && <p>{formError}</p>}
       </form>
-
-      <button className="bg-slate-400 rounded absolute left-80  ">
-        <Link className="text-black font-bold " to="/">
-          Back to Home
-        </Link>
-      </button>
-      <hr></hr>
     </>
   );
 }

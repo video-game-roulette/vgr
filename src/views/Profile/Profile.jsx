@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import UserProfile from '../../components/Profile/UserProfile';
 import { useGame } from '../../context/GameContext';
-import { fetchGames } from '../../services/game';
+import { getUserGame } from '../../services/game';
 
 export default function Profile() {
   const { game, setGame } = useGame();
@@ -9,7 +9,7 @@ export default function Profile() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetchGames();
+      const data = await getUserGame();
       setGame(data);
       setLoading(false);
     };

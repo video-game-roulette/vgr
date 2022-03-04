@@ -7,7 +7,6 @@ export async function fetchGames() {
 
 export async function getGamesById(id) {
   let response = await client.from('games').select().match({ id }).single();
-  console.log('game', response);
   return response;
 }
 
@@ -31,7 +30,7 @@ export async function deleteGame(id) {
   return response;
 }
 
-export async function getUserGame(id) {
+export async function getUserGame() {
   const response = await client
     .from('games')
     .select('*')

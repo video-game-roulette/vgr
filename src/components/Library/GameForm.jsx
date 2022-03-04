@@ -2,14 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import useForm from '../../hooks/useForm';
 
-export default function GameForm({ onSubmit, title, label = 'Authenticate' }) {
+export default function GameForm({ game, onSubmit, label = 'Authenticate' }) {
   const { formState, formError, handleFormChange, setFormError } = useForm({
-    title: '',
-    description: '',
-    image: '',
+    title: game?.title || '',
+    description: game?.description || '',
+    image: game?.image || '',
   });
-
-  console.log('title', title);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,8 +25,11 @@ export default function GameForm({ onSubmit, title, label = 'Authenticate' }) {
   return (
     <>
       <form onSubmit={handleSubmit}>
+        <legend>{label}</legend>
         <section>
-          <label htmlFor="title">Title: </label>
+          <label className="text-slate-200 font-bold" htmlFor="title">
+            Title:{' '}
+          </label>
           <input
             id="title"
             type="text"
@@ -38,7 +39,9 @@ export default function GameForm({ onSubmit, title, label = 'Authenticate' }) {
           />
         </section>
         <section>
-          <label htmlFor="description">Description: </label>
+          <label className="text-slate-200 font-bold" htmlFor="description">
+            Description:{' '}
+          </label>
           <input
             id="description"
             type="text"
@@ -48,7 +51,9 @@ export default function GameForm({ onSubmit, title, label = 'Authenticate' }) {
           />
         </section>
         <section>
-          <label htmlFor="image">Image Link: </label>
+          <label className="text-slate-200 font-bold" htmlFor="image">
+            Image Link:{' '}
+          </label>
           <input
             htmlFor="image"
             id="image"
@@ -58,10 +63,14 @@ export default function GameForm({ onSubmit, title, label = 'Authenticate' }) {
             onChange={handleFormChange}
           />
         </section>
-        <button>Add Game</button>
+        <button className="flex border-4 font-bold bg-indigo-400 m-auto text-slate-200 rounded-md text-2xl p-2 mb-5">
+          Save Game
+        </button>
         {formError && <p>{formError}</p>}
       </form>
-      <Link to="/library">Back to Library</Link>
+      <button className="flex border-4 font-bold bg-indigo-400 m-auto text-slate-200 rounded-md text-2xl p-2 mb-5">
+        <Link to="/profile">Back to Profile</Link>
+      </button>
     </>
   );
 }

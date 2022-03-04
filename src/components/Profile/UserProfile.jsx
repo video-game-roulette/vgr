@@ -5,32 +5,42 @@ import { useUser } from '../../context/UserContext';
 export default function UserProfile({ game }) {
   const { user } = useUser();
   const data = game.data;
-  console.log('games', game);
+
+  //Randomizer Function
+  const random = Math.floor(Math.random() * data.length);
+  const randomGame = data[random].id;
 
   return (
     <div>
-      <h1>Welcome {user}</h1>
-      <Link to={`/library/9`}>
-        <button className="border-2 border-sky-500">Find A Game</button>
+      <h1 className="font-extrabold mt-4 mb-2 text-slate-100 flex justify-center">
+        Welcome {user}
+      </h1>
+      <Link to={`/profile/${randomGame}`}>
+        <button className="bg-slate-100 mt-6 ml-10 rounded-md font-bold text-blue-600 px-1 ">
+          Find A Game
+        </button>
       </Link>
-      <Link to="/library">
-        <button className="border-2 border-sky-500">Game Library</button>
-      </Link>
-      {/* Move to game Library */}
       <Link to="/library/addgame">
-        <button className="border-2 border-sky-500">Add Game</button>
+        <button className="bg-indigo-500 mt-6 rounded-md ml-20 font-bold text-slate-100 px-1 left-2">
+          Add Game
+        </button>
       </Link>
-      <div>
+      <div className="flex flex-wrap justify-center">
         {data.map((item) => (
-          <div key={item.id}>
-            <h1>{item.title}</h1>
+          <div
+            className=" pt-3 flex flex-col w-1/2 sm:w-1/3 mt-5 "
+            key={item.id}
+          >
+            <Link to={`/profile/${item.id}`}>
+              <img
+                className="object-cover pl-6 h-30 w-28 rounded-md flex columns-2 mt-5"
+                src={item.image}
+              />
+              <h1 className="font-bold px-2 text-slate-200">{item.title}</h1>
+            </Link>
           </div>
         ))}
       </div>
-      {/* Delete after Edit works */}
-      <Link to="/library/edit/9">
-        <button className="border-2 border-sky-500">edit</button>
-      </Link>
     </div>
   );
 }
