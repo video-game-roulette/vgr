@@ -24,15 +24,12 @@ export default function About() {
         <h2>Andrew</h2>
       </Link>
       <p>
-<<<<<<< HEAD
         From Amatuer Pro Triathlete to a Fullstack Developer base in Portland,
         OR, Andrew was instrumental in the team sucessefully completeing the
         project on time, and above expectation. Core design principles and a
         tailwind styler, Andrew helped create the overall style of the App.
-=======
         Switching from being an Amatuer Pro Triathlete to a Fullstack Developer
         in Beaverton, OR.
->>>>>>> 40210620dc09d0f835e9eaaeaecc4d13f744e353
       </p>
       <br></br>
       <Link
