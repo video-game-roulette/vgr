@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useGame } from '../../context/GameContext';
 import { Link, useHistory, useParams } from 'react-router-dom';
-
 import { deleteGame, getGamesById } from '../../services/game';
 
 export default function GameDetails() {
@@ -48,7 +47,6 @@ export default function GameDetails() {
         className="flex border-4 mt-5 font-bold bg-indigo-400 m-auto text-slate-200 rounded-md text-2xl p-2 mb-5"
         onClick={handleDelete}
       >
-        {/* <Link to="/profile">Delete Game</Link> */}
         Delete Game
       </button>
     </div>

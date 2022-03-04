@@ -15,7 +15,6 @@ export default function Header() {
       <Link to="/">
         <p className="font-black text-slate-200 text-2xl ml-5">VGR</p>
       </Link>
-
       {user ? (
         <Link to="/">
           <button

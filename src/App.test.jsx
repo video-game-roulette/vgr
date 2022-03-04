@@ -6,8 +6,7 @@ import { UserProvider } from './context/UserContext';
 import userEvent from '@testing-library/user-event';
 
 test('Testing if homepage renders all the correct content in both the header and the body', () => {
-  // const container =
-  render(
+  const container = render(
     <UserProvider>
       <GameProvider>
         <MemoryRouter>
@@ -18,7 +17,6 @@ test('Testing if homepage renders all the correct content in both the header and
   );
 
   const logo = screen.getByText(/vgr/i);
-  const isSignedIn = screen.getByText(/not signed in/i);
   const signInBtn = screen.getByRole('button', { name: /header sign in/i });
   const heading = screen.getByRole('heading', { name: /video game roulette/i });
   const intro = screen.getByText(
@@ -27,17 +25,15 @@ test('Testing if homepage renders all the correct content in both the header and
   const findGameBtn = screen.getByRole('button', { name: /find a game/i });
 
   expect(logo).toBeInTheDocument();
-  expect(isSignedIn).toBeInTheDocument();
   expect(signInBtn).toBeInTheDocument();
   expect(heading).toBeInTheDocument();
   expect(intro).toBeInTheDocument();
   expect(findGameBtn).toBeInTheDocument();
-  // expect(container).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
 test('testing the view of the login page', () => {
-  //const container =
-  render(
+  const container = render(
     <UserProvider>
       <GameProvider>
         <MemoryRouter>
@@ -56,20 +52,17 @@ test('testing the view of the login page', () => {
   const signinFormBtn = screen.getByRole('button', { name: /sign in button/i });
   const signupQuestion = screen.getByText(/need an account\?/i);
   const signupLink = screen.getByRole('link', { name: /sign up/i });
-  const backHome = screen.getByRole('link', { name: /back to home/i });
 
   expect(emailInput).toBeInTheDocument();
   expect(passwordInput).toBeInTheDocument();
   expect(signinFormBtn).toBeInTheDocument();
   expect(signupQuestion).toBeInTheDocument();
   expect(signupLink).toBeInTheDocument();
-  expect(backHome).toBeInTheDocument();
-  // expect(container).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
 test('testing the view for the signup page', () => {
-  // const container =
-  render(
+  const container = render(
     <UserProvider>
       <GameProvider>
         <MemoryRouter>
@@ -91,19 +84,16 @@ test('testing the view for the signup page', () => {
   const passwordInput = screen.getByLabelText(/password:/i);
   const signinFormBtn = screen.getByRole('button', { name: /sign in button/i });
   const signinQuestion = screen.getByText(/already have an account\?/i);
-  const backHome = screen.getByRole('link', { name: /back to home/i });
 
   expect(emailInput).toBeInTheDocument();
   expect(passwordInput).toBeInTheDocument();
   expect(signinFormBtn).toBeInTheDocument();
   expect(signinQuestion).toBeInTheDocument();
-  expect(backHome).toBeInTheDocument();
-  // expect(container).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
 test('testing that the about us page renders', () => {
-  // const container =
-  render(
+  const container = render(
     <UserProvider>
       <GameProvider>
         <MemoryRouter>
@@ -131,62 +121,11 @@ test('testing that the about us page renders', () => {
   expect(andrewInfo).toBeInTheDocument();
   expect(mark).toBeInTheDocument();
   expect(markInfo).toBeInTheDocument();
-  // expect(container).toMatchSnapshot();
-});
-
-test('testing login functionality and the profile view', async () => {
-  // const container =
-  render(
-    <UserProvider>
-      <GameProvider>
-        <MemoryRouter>
-          <App />
-        </MemoryRouter>
-      </GameProvider>
-    </UserProvider>
-  );
-
-  const signInBtn = screen.getByRole('button', { name: /header sign in/i });
-  userEvent.click(signInBtn);
-
-  const emailInput = screen.getByRole('textbox', { name: /email:/i });
-  const email = 'ajoy267@gmail.com';
-  userEvent.type(emailInput, email);
-
-  const passwordInput = screen.getByLabelText(/password:/i);
-  const password = '12345678';
-  userEvent.type(passwordInput, password);
-
-  const signinFormBtn = screen.getByRole('button', { name: /sign in button/i });
-  userEvent.click(signinFormBtn);
-
-  const isSignedIn = await screen.findByText(
-    /signed in as ajoy267@gmail\.com/i
-  );
-  const signOutBtn = screen.getByRole('button', { name: /sign out/i });
-  const heading = await screen.findByRole('heading', {
-    name: /welcome ajoy267@gmail\.com/i,
-  });
-  const findGame = screen.getByRole('button', { name: /find a game/i });
-  const addGame = screen.getByRole('button', { name: /add game/i });
-  const game1 = screen.getByRole('heading', { name: /test5/i });
-  const game2 = screen.getByRole('heading', { name: /test6/i });
-  const footer = screen.getByRole('link', { name: /about us/i });
-
-  expect(isSignedIn).toBeInTheDocument();
-  expect(signOutBtn).toBeInTheDocument();
-  expect(heading).toBeInTheDocument();
-  expect(findGame).toBeInTheDocument();
-  expect(addGame).toBeInTheDocument();
-  expect(game1).toBeInTheDocument();
-  expect(game2).toBeInTheDocument();
-  expect(footer).toBeInTheDocument();
-  // expect(container).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
 test('testing the functionality of going to our game details page and the view on that page', async () => {
-  // const container =
-  render(
+  const container = render(
     <UserProvider>
       <GameProvider>
         <MemoryRouter>
@@ -219,19 +158,16 @@ test('testing the functionality of going to our game details page and the view o
     name: /game description/i,
   });
   const editBtn = screen.getByRole('link', { name: /edit/i });
-  const deleteBtn = screen.getByRole('link', { name: /delete game/i });
 
   expect(gameTitle).toBeInTheDocument();
   expect(gameImg).toBeInTheDocument();
   expect(gameDescription).toBeInTheDocument();
   expect(editBtn).toBeInTheDocument();
-  expect(deleteBtn).toBeInTheDocument();
-  // expect(container).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
 test('testing that the add btn works and renders the add game form', async () => {
-  // const container =
-  render(
+  const container = render(
     <UserProvider>
       <GameProvider>
         <MemoryRouter>
@@ -271,12 +207,11 @@ test('testing that the add btn works and renders the add game form', async () =>
   expect(imgInput).toBeInTheDocument();
   expect(saveGame).toBeInTheDocument();
   expect(backLink).toBeInTheDocument();
-  // expect(container).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
 test('testing that the edit btn brings you to the edit view', async () => {
-  // const container =
-  render(
+  const container = render(
     <UserProvider>
       <GameProvider>
         <MemoryRouter>
@@ -319,7 +254,7 @@ test('testing that the edit btn brings you to the edit view', async () => {
   expect(imgInput).toBeInTheDocument();
   expect(saveGame).toBeInTheDocument();
   expect(backLink).toBeInTheDocument();
-  // expect(container).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
 test('testing the find a game view', async () => {
@@ -360,141 +295,3 @@ test('testing the find a game view', async () => {
   expect(gameImg).toBeInTheDocument();
   expect(gameDescription).toBeInTheDocument();
 });
-
-// test('testing that I can add a game', async () => {
-//   render(
-//     <MemoryRouter>
-//       <UserProvider>
-//         <GameProvider>
-//           <App />
-//         </GameProvider>
-//       </UserProvider>
-//     </MemoryRouter>
-//   );
-
-//   const signInBtn = screen.getByRole('button', { name: /header sign in/i });
-//   userEvent.click(signInBtn);
-
-//   const emailInput = screen.getByRole('textbox', { name: /email:/i });
-//   const email = 'ajoy267@gmail.com';
-//   userEvent.type(emailInput, email);
-
-//   const passwordInput = screen.getByLabelText(/password:/i);
-//   const password = '12345678';
-//   userEvent.type(passwordInput, password);
-
-//   const signinFormBtn = screen.getByRole('button', { name: /sign in button/i });
-//   userEvent.click(signinFormBtn);
-
-//   const addGameBtn = await screen.findByRole('button', { name: /add game/i });
-//   userEvent.click(addGameBtn);
-
-//   const titleInput = await screen.findByRole('textbox', { name: /title:/i });
-//   const title = 'Gta';
-//   userEvent.type(titleInput, title);
-
-//   const descriptionInput = screen.getByRole('textbox', {
-//     name: /description:/i,
-//   });
-//   const description = 'its a game';
-//   userEvent.type(descriptionInput, description);
-
-//   const imgInput = screen.getByRole('textbox', { name: /image link:/i });
-//   const img = 'this is an image';
-//   userEvent.type(imgInput, img);
-
-//   const saveGame = screen.getByRole('button', { name: /save game/i });
-//   userEvent.click(saveGame);
-
-//   const newGame = await screen.findByRole('heading', { name: /gta/i });
-
-//   expect(newGame).toBeInTheDocument();
-// });
-
-// test('testing that our delete btn deletes a game', async () => {
-
-//   render(
-//     <MemoryRouter>
-//       <UserProvider>
-//         <GameProvider>
-//           <App />
-//         </GameProvider>
-//       </UserProvider>
-//     </MemoryRouter>
-//   );
-
-//   const signInBtn = screen.getByRole('button', { name: /header sign in/i });
-//   userEvent.click(signInBtn);
-
-//   const emailInput = screen.getByRole('textbox', { name: /email:/i });
-//   const email = 'ajoy267@gmail.com';
-//   userEvent.type(emailInput, email);
-
-//   const passwordInput = screen.getByLabelText(/password:/i);
-//   const password = '12345678';
-//   userEvent.type(passwordInput, password);
-
-//   const signinFormBtn = screen.getByRole('button', { name: /sign in button/i });
-//   userEvent.click(signinFormBtn);
-
-//   const addGameBtn = await screen.findByRole('button', { name: /add game/i });
-//   userEvent.click(addGameBtn);
-
-//   const titleInput = await screen.findByRole('textbox', { name: /title:/i });
-//   const title = 'Gta';
-//   userEvent.type(titleInput, title);
-
-//   const descriptionInput = screen.getByRole('textbox', {
-//     name: /description:/i,
-//   });
-//   const description = 'its a game';
-//   userEvent.type(descriptionInput, description);
-
-//   const imgInput = screen.getByRole('textbox', { name: /image link:/i });
-//   const img = 'this is an image';
-//   userEvent.type(imgInput, img);
-
-//   const saveGame = screen.getByRole('button', { name: /save game/i });
-//   userEvent.click(saveGame);
-
-//   const newGame = await screen.findByRole('heading', { name: /gta/i });
-
-//   expect(newGame).toBeInTheDocument();
-// });
-
-// test('testing that our delete btn deletes a game', async () => {
-//   render(
-//     <MemoryRouter>
-//       <UserProvider>
-//         <GameProvider>
-//           <App />
-//         </GameProvider>
-//       </UserProvider>
-//     </MemoryRouter>
-//   );
-
-//   const signInBtn = screen.getByRole('button', { name: /header sign in/i });
-//   userEvent.click(signInBtn);
-
-//   const emailInput = screen.getByRole('textbox', { name: /email:/i });
-//   const email = 'ajoy267@gmail.com';
-//   userEvent.type(emailInput, email);
-
-//   const passwordInput = screen.getByLabelText(/password:/i);
-//   const password = '12345678';
-//   userEvent.type(passwordInput, password);
-
-//   const signinFormBtn = screen.getByRole('button', { name: /sign in button/i });
-//   userEvent.click(signinFormBtn);
-
-//   const game = await screen.findByRole('heading', { name: /gta/i });
-//   userEvent.click(game);
-
-//   const deleteBtn = await screen.findByRole('link', { name: /delete game/i });
-//   userEvent.click(deleteBtn);
-
-//   screen.debug();
-//   const gameDelete = await screen.findByRole('heading', { name: /gta/i });
-
-//   expect(gameDelete).not.toBeInTheDocument();
-// });

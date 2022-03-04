@@ -7,8 +7,6 @@ export default function Profile() {
   const { game, setGame } = useGame();
   const [loading, setLoading] = useState(true);
 
-  console.log('game', game);
-
   useEffect(() => {
     const fetchData = async () => {
       const data = await getUserGame();
