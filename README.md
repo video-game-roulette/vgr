@@ -25,7 +25,7 @@ Our Project team members are:
   <br>
   Email: <a href = "mailto: markjvoltaire@gmail.com">markjvoltaire@gmail.com</a>
   <br>
-  LinkedIn: <a href = "https://www.linkedin.com/in/mark-voltaire-4907091bb/">https://www.linkedin.com/in/mark-voltaire</a>
+  LinkedIn: <a href = "https://www.linkedin.com/in/mark-voltaire-4907091bb/">https://www.linkedin.com/in/mark-voltaire-4907091bb/</a>
   <br>
   GitHub: <a href = "https://github.com/markjvoltaire">https://github.com/markjvoltaire</a>
 
