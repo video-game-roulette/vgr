@@ -5,6 +5,7 @@ import useForm from '../../hooks/useForm';
 export default function LoginForm({ onSubmit, label = 'Authenticate' }) {
   const { formState, formError, handleFormChange, setFormError } = useForm({
     email: '',
+
     password: '',
   });
 
