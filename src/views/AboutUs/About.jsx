@@ -28,6 +28,8 @@ export default function About() {
         OR, Andrew was instrumental in the team sucessefully completeing the
         project on time, and above expectation. Core design principles and a
         tailwind styler, Andrew helped create the overall style of the App.
+        Switching from being an Amatuer Pro Triathlete to a Fullstack Developer
+        in Beaverton, OR.
       </p>
       <br></br>
       <Link
