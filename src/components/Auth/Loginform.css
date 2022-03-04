@@ -1,0 +1,19 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: auto;
+}
+
+label {
+  display: flex;
+  margin: auto;
+  padding: 2px;
+}
+
+.formbutton {
+  margin: 5px;
+  background-color: white;
+  border-radius: 10%;
+  width: 80px;
+}
