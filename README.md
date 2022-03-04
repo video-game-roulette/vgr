@@ -11,7 +11,7 @@ Our Project team members are:
 - Andrew
   <br>
   Email: <a href = "mailto: ajoy267@gmail.com
-  ">james.ajoy267@gmail.com
+  ">ajoy267@gmail.com
   </a>
   <br>
   LinkedIn: <a href = "https://www.linkedin.com/in/andrewjoy12/">https://www.linkedin.com/in/andrewjoy12/
