@@ -20,7 +20,6 @@ export default function UserProfile({ game }) {
           Find A Game
         </button>
       </Link>
-
       <Link to="/library/addgame">
         <button className="bg-indigo-500 mt-6 rounded-md ml-20 font-bold text-slate-100 px-1 left-2">
           Add Game

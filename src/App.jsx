@@ -1,4 +1,4 @@
-import './App.css'; /* Global CSS */
+import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './views/Home/Home';
 import Header from './components/Layout/Header';
@@ -6,7 +6,6 @@ import Footer from './components/Layout/Footer';
 import Login from './views/Auth/Login';
 import About from './views/AboutUs/About';
 import Profile from './views/Profile/Profile';
-import Library from './views/Library/Library';
 import Game from './views/Library/Game';
 import AddEdit from './views/Library/AddEdit';
 import { UserProvider } from './context/UserContext';
@@ -44,9 +43,6 @@ export default function App() {
               </ProtectedRoute>
               <ProtectedRoute path="/profile">
                 <Profile />
-              </ProtectedRoute>
-              <ProtectedRoute path="/library">
-                <Library />
               </ProtectedRoute>
             </Switch>
             <Footer />

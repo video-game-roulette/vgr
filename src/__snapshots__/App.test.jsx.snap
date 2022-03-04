@@ -1,0 +1,1732 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing if homepage renders all the correct content in both the header and the body 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <main>
+        <header
+          class="flex flex-row mt-5 pb-2"
+        >
+          <a
+            href="/"
+          >
+            <p
+              class="font-black text-slate-200 text-2xl ml-5"
+            >
+              VGR
+            </p>
+          </a>
+          <a
+            href="/login"
+          >
+            <button
+              aria-label="header sign in"
+              class="absolute top-0 right-0 mt-4 mr-4 w-70 text-slate-200 block font-bold ml-10 text-xl border-4 bg-indigo-400 rounded p-1"
+            >
+              Sign In
+            </button>
+          </a>
+        </header>
+        <div>
+          <div
+            class="flex flex-col"
+          >
+            <h1
+              class="flex justify-center my-10 font-black text-slate-200 text-3xl"
+            >
+              Video Game Roulette
+            </h1>
+            <p
+              class="flex justify-center mb-10 px-5 font-bold text-slate-200 text-xl"
+            >
+              Are you bored of the game you're currently playing? Are you having trouble trying to decide what game to play next? Try out our amazing video game roulette app that gives you an unbiased random game to play next out of a list of games that you have!
+            </p>
+            <a
+              href="/profile"
+            >
+              <button
+                class="flex border-4 font-bold bg-indigo-400 m-auto text-slate-200 rounded-md text-2xl p-2 mb-5"
+              >
+                Find A Game
+              </button>
+            </a>
+          </div>
+        </div>
+        <a
+          class="flex justify-end text-white mr-10 mb-5 static bottom-0 right-0"
+          href="/about-us"
+        >
+          About Us
+        </a>
+      </main>
+    </div>
+  </body>,
+  "container": <div>
+    <main>
+      <header
+        class="flex flex-row mt-5 pb-2"
+      >
+        <a
+          href="/"
+        >
+          <p
+            class="font-black text-slate-200 text-2xl ml-5"
+          >
+            VGR
+          </p>
+        </a>
+        <a
+          href="/login"
+        >
+          <button
+            aria-label="header sign in"
+            class="absolute top-0 right-0 mt-4 mr-4 w-70 text-slate-200 block font-bold ml-10 text-xl border-4 bg-indigo-400 rounded p-1"
+          >
+            Sign In
+          </button>
+        </a>
+      </header>
+      <div>
+        <div
+          class="flex flex-col"
+        >
+          <h1
+            class="flex justify-center my-10 font-black text-slate-200 text-3xl"
+          >
+            Video Game Roulette
+          </h1>
+          <p
+            class="flex justify-center mb-10 px-5 font-bold text-slate-200 text-xl"
+          >
+            Are you bored of the game you're currently playing? Are you having trouble trying to decide what game to play next? Try out our amazing video game roulette app that gives you an unbiased random game to play next out of a list of games that you have!
+          </p>
+          <a
+            href="/profile"
+          >
+            <button
+              class="flex border-4 font-bold bg-indigo-400 m-auto text-slate-200 rounded-md text-2xl p-2 mb-5"
+            >
+              Find A Game
+            </button>
+          </a>
+        </div>
+      </div>
+      <a
+        class="flex justify-end text-white mr-10 mb-5 static bottom-0 right-0"
+        href="/about-us"
+      >
+        About Us
+      </a>
+    </main>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`testing that the about us page renders 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <main>
+        <header
+          class="flex flex-row mt-5 pb-2"
+        >
+          <a
+            href="/"
+          >
+            <p
+              class="font-black text-slate-200 text-2xl ml-5"
+            >
+              VGR
+            </p>
+          </a>
+          <a
+            href="/login"
+          >
+            <button
+              aria-label="header sign in"
+              class="absolute top-0 right-0 mt-4 mr-4 w-70 text-slate-200 block font-bold ml-10 text-xl border-4 bg-indigo-400 rounded p-1"
+            >
+              Sign In
+            </button>
+          </a>
+        </header>
+        <div
+          class="aboutus"
+        >
+          <br />
+          <h1>
+            About the Creators
+          </h1>
+          <br />
+          <a
+            href="https://www.linkedin.com/in/andrewjoy12/"
+            target="_blank"
+          >
+            <div
+              class="us"
+            >
+              <img
+                class="pfp"
+                src="/path/image"
+              />
+              <img
+                class="linkedin"
+                src="/path/image"
+              />
+            </div>
+            <h2>
+              Andrew
+            </h2>
+          </a>
+          <p>
+            From Amatuer Pro Triathlete to a Fullstack Developer base in Portland, OR, Andrew was instrumental in the team sucessefully completeing the project on time, and above expectation. Core design principles and a tailwind styler, Andrew helped create the overall style of the App.
+          </p>
+          <br />
+          <a
+            href="https://www.linkedin.com/in/mark-voltaire-4907091bb/"
+            target="_blank"
+          >
+            <div
+              class="us"
+            >
+              <img
+                class="pfp"
+                src="/path/image"
+              />
+              <img
+                class="linkedin"
+                src="/path/image"
+              />
+            </div>
+            <h2>
+              Mark
+            </h2>
+          </a>
+          <p>
+            THE up and coming Software Developer from Miami, Florida. Mark built out functional buttons that communicated with the database and handled profile information and style. Mark’s mind is designed to understand development at a fundamental level and is a solid and reliable member of the team.
+          </p>
+          <br />
+          <a
+            href="https://www.linkedin.com/in/gregory-crowder/"
+            target="_blank"
+          >
+            <div
+              class="us"
+            >
+              <img
+                class="pfp"
+                src="/path/image"
+              />
+              <img
+                class="linkedin"
+                src="/path/image"
+              />
+            </div>
+            <h2>
+              Chase
+            </h2>
+          </a>
+          <p>
+            Based in Portland, Chase’s big dreams become reality to his attention to detail and making sure no corners are cut. Chase was the team member that had everyone's back. He provided the final piece of the puzzle to solve many coding barriers.
+          </p>
+          <br />
+          <br />
+          <a
+            href="https://www.linkedin.com/in/brett-seifried/"
+            target="_blank"
+          >
+            <div
+              class="us"
+            >
+              <img
+                class="pfp"
+                src="/path/image"
+              />
+              <img
+                class="linkedin"
+                src="/path/image"
+              />
+            </div>
+            <h2>
+              Brettford
+            </h2>
+          </a>
+          <p>
+            The other PNW developer who worked on Routing, communication with the Data base, and this page you’re reading right now! As a father, veteran, and Full-Stack developer, Brettford couldn’t ask for more.
+          </p>
+        </div>
+        <a
+          class="flex justify-end text-white mr-10 mb-5 static bottom-0 right-0"
+          href="/about-us"
+        >
+          About Us
+        </a>
+      </main>
+    </div>
+  </body>,
+  "container": <div>
+    <main>
+      <header
+        class="flex flex-row mt-5 pb-2"
+      >
+        <a
+          href="/"
+        >
+          <p
+            class="font-black text-slate-200 text-2xl ml-5"
+          >
+            VGR
+          </p>
+        </a>
+        <a
+          href="/login"
+        >
+          <button
+            aria-label="header sign in"
+            class="absolute top-0 right-0 mt-4 mr-4 w-70 text-slate-200 block font-bold ml-10 text-xl border-4 bg-indigo-400 rounded p-1"
+          >
+            Sign In
+          </button>
+        </a>
+      </header>
+      <div
+        class="aboutus"
+      >
+        <br />
+        <h1>
+          About the Creators
+        </h1>
+        <br />
+        <a
+          href="https://www.linkedin.com/in/andrewjoy12/"
+          target="_blank"
+        >
+          <div
+            class="us"
+          >
+            <img
+              class="pfp"
+              src="/path/image"
+            />
+            <img
+              class="linkedin"
+              src="/path/image"
+            />
+          </div>
+          <h2>
+            Andrew
+          </h2>
+        </a>
+        <p>
+          From Amatuer Pro Triathlete to a Fullstack Developer base in Portland, OR, Andrew was instrumental in the team sucessefully completeing the project on time, and above expectation. Core design principles and a tailwind styler, Andrew helped create the overall style of the App.
+        </p>
+        <br />
+        <a
+          href="https://www.linkedin.com/in/mark-voltaire-4907091bb/"
+          target="_blank"
+        >
+          <div
+            class="us"
+          >
+            <img
+              class="pfp"
+              src="/path/image"
+            />
+            <img
+              class="linkedin"
+              src="/path/image"
+            />
+          </div>
+          <h2>
+            Mark
+          </h2>
+        </a>
+        <p>
+          THE up and coming Software Developer from Miami, Florida. Mark built out functional buttons that communicated with the database and handled profile information and style. Mark’s mind is designed to understand development at a fundamental level and is a solid and reliable member of the team.
+        </p>
+        <br />
+        <a
+          href="https://www.linkedin.com/in/gregory-crowder/"
+          target="_blank"
+        >
+          <div
+            class="us"
+          >
+            <img
+              class="pfp"
+              src="/path/image"
+            />
+            <img
+              class="linkedin"
+              src="/path/image"
+            />
+          </div>
+          <h2>
+            Chase
+          </h2>
+        </a>
+        <p>
+          Based in Portland, Chase’s big dreams become reality to his attention to detail and making sure no corners are cut. Chase was the team member that had everyone's back. He provided the final piece of the puzzle to solve many coding barriers.
+        </p>
+        <br />
+        <br />
+        <a
+          href="https://www.linkedin.com/in/brett-seifried/"
+          target="_blank"
+        >
+          <div
+            class="us"
+          >
+            <img
+              class="pfp"
+              src="/path/image"
+            />
+            <img
+              class="linkedin"
+              src="/path/image"
+            />
+          </div>
+          <h2>
+            Brettford
+          </h2>
+        </a>
+        <p>
+          The other PNW developer who worked on Routing, communication with the Data base, and this page you’re reading right now! As a father, veteran, and Full-Stack developer, Brettford couldn’t ask for more.
+        </p>
+      </div>
+      <a
+        class="flex justify-end text-white mr-10 mb-5 static bottom-0 right-0"
+        href="/about-us"
+      >
+        About Us
+      </a>
+    </main>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`testing that the add btn works and renders the add game form 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <main>
+        <header
+          class="flex flex-row mt-5 pb-2"
+        >
+          <a
+            href="/"
+          >
+            <p
+              class="font-black text-slate-200 text-2xl ml-5"
+            >
+              VGR
+            </p>
+          </a>
+          <a
+            href="/"
+          >
+            <button
+              class="absolute top-0 right-0 mt-4 mr-4 w-70 text-slate-200 block font-bold ml-10 text-xl border-4 bg-indigo-400 rounded p-1"
+            >
+              Sign Out
+            </button>
+          </a>
+        </header>
+        <section>
+          <form>
+            <legend>
+              Add Game
+            </legend>
+            <section>
+              <label
+                class="text-slate-200 font-bold"
+                for="title"
+              >
+                Title:
+                 
+              </label>
+              <input
+                id="title"
+                name="title"
+                type="text"
+                value=""
+              />
+            </section>
+            <section>
+              <label
+                class="text-slate-200 font-bold"
+                for="description"
+              >
+                Description:
+                 
+              </label>
+              <input
+                id="description"
+                name="description"
+                type="text"
+                value=""
+              />
+            </section>
+            <section>
+              <label
+                class="text-slate-200 font-bold"
+                for="image"
+              >
+                Image Link:
+                 
+              </label>
+              <input
+                for="image"
+                id="image"
+                name="image"
+                type="text"
+                value=""
+              />
+            </section>
+            <button
+              class="flex border-4 font-bold bg-indigo-400 m-auto text-slate-200 rounded-md text-2xl p-2 mb-5"
+            >
+              Save Game
+            </button>
+            
+          </form>
+          <button
+            class="flex border-4 font-bold bg-indigo-400 m-auto text-slate-200 rounded-md text-2xl p-2 mb-5"
+          >
+            <a
+              href="/profile"
+            >
+              Back to Profile
+            </a>
+          </button>
+        </section>
+        <a
+          class="flex justify-end text-white mr-10 mb-5 static bottom-0 right-0"
+          href="/about-us"
+        >
+          About Us
+        </a>
+      </main>
+    </div>
+  </body>,
+  "container": <div>
+    <main>
+      <header
+        class="flex flex-row mt-5 pb-2"
+      >
+        <a
+          href="/"
+        >
+          <p
+            class="font-black text-slate-200 text-2xl ml-5"
+          >
+            VGR
+          </p>
+        </a>
+        <a
+          href="/"
+        >
+          <button
+            class="absolute top-0 right-0 mt-4 mr-4 w-70 text-slate-200 block font-bold ml-10 text-xl border-4 bg-indigo-400 rounded p-1"
+          >
+            Sign Out
+          </button>
+        </a>
+      </header>
+      <section>
+        <form>
+          <legend>
+            Add Game
+          </legend>
+          <section>
+            <label
+              class="text-slate-200 font-bold"
+              for="title"
+            >
+              Title:
+               
+            </label>
+            <input
+              id="title"
+              name="title"
+              type="text"
+              value=""
+            />
+          </section>
+          <section>
+            <label
+              class="text-slate-200 font-bold"
+              for="description"
+            >
+              Description:
+               
+            </label>
+            <input
+              id="description"
+              name="description"
+              type="text"
+              value=""
+            />
+          </section>
+          <section>
+            <label
+              class="text-slate-200 font-bold"
+              for="image"
+            >
+              Image Link:
+               
+            </label>
+            <input
+              for="image"
+              id="image"
+              name="image"
+              type="text"
+              value=""
+            />
+          </section>
+          <button
+            class="flex border-4 font-bold bg-indigo-400 m-auto text-slate-200 rounded-md text-2xl p-2 mb-5"
+          >
+            Save Game
+          </button>
+          
+        </form>
+        <button
+          class="flex border-4 font-bold bg-indigo-400 m-auto text-slate-200 rounded-md text-2xl p-2 mb-5"
+        >
+          <a
+            href="/profile"
+          >
+            Back to Profile
+          </a>
+        </button>
+      </section>
+      <a
+        class="flex justify-end text-white mr-10 mb-5 static bottom-0 right-0"
+        href="/about-us"
+      >
+        About Us
+      </a>
+    </main>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`testing that the edit btn brings you to the edit view 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <main>
+        <header
+          class="flex flex-row mt-5 pb-2"
+        >
+          <a
+            href="/"
+          >
+            <p
+              class="font-black text-slate-200 text-2xl ml-5"
+            >
+              VGR
+            </p>
+          </a>
+          <a
+            href="/"
+          >
+            <button
+              class="absolute top-0 right-0 mt-4 mr-4 w-70 text-slate-200 block font-bold ml-10 text-xl border-4 bg-indigo-400 rounded p-1"
+            >
+              Sign Out
+            </button>
+          </a>
+        </header>
+        <section>
+          <form>
+            <legend>
+              Edit Game
+            </legend>
+            <section>
+              <label
+                class="text-slate-200 font-bold"
+                for="title"
+              >
+                Title:
+                 
+              </label>
+              <input
+                id="title"
+                name="title"
+                type="text"
+                value="test5"
+              />
+            </section>
+            <section>
+              <label
+                class="text-slate-200 font-bold"
+                for="description"
+              >
+                Description:
+                 
+              </label>
+              <input
+                id="description"
+                name="description"
+                type="text"
+                value="test5"
+              />
+            </section>
+            <section>
+              <label
+                class="text-slate-200 font-bold"
+                for="image"
+              >
+                Image Link:
+                 
+              </label>
+              <input
+                for="image"
+                id="image"
+                name="image"
+                type="text"
+                value="test5"
+              />
+            </section>
+            <button
+              class="flex border-4 font-bold bg-indigo-400 m-auto text-slate-200 rounded-md text-2xl p-2 mb-5"
+            >
+              Save Game
+            </button>
+            
+          </form>
+          <button
+            class="flex border-4 font-bold bg-indigo-400 m-auto text-slate-200 rounded-md text-2xl p-2 mb-5"
+          >
+            <a
+              href="/profile"
+            >
+              Back to Profile
+            </a>
+          </button>
+        </section>
+        <a
+          class="flex justify-end text-white mr-10 mb-5 static bottom-0 right-0"
+          href="/about-us"
+        >
+          About Us
+        </a>
+      </main>
+    </div>
+  </body>,
+  "container": <div>
+    <main>
+      <header
+        class="flex flex-row mt-5 pb-2"
+      >
+        <a
+          href="/"
+        >
+          <p
+            class="font-black text-slate-200 text-2xl ml-5"
+          >
+            VGR
+          </p>
+        </a>
+        <a
+          href="/"
+        >
+          <button
+            class="absolute top-0 right-0 mt-4 mr-4 w-70 text-slate-200 block font-bold ml-10 text-xl border-4 bg-indigo-400 rounded p-1"
+          >
+            Sign Out
+          </button>
+        </a>
+      </header>
+      <section>
+        <form>
+          <legend>
+            Edit Game
+          </legend>
+          <section>
+            <label
+              class="text-slate-200 font-bold"
+              for="title"
+            >
+              Title:
+               
+            </label>
+            <input
+              id="title"
+              name="title"
+              type="text"
+              value="test5"
+            />
+          </section>
+          <section>
+            <label
+              class="text-slate-200 font-bold"
+              for="description"
+            >
+              Description:
+               
+            </label>
+            <input
+              id="description"
+              name="description"
+              type="text"
+              value="test5"
+            />
+          </section>
+          <section>
+            <label
+              class="text-slate-200 font-bold"
+              for="image"
+            >
+              Image Link:
+               
+            </label>
+            <input
+              for="image"
+              id="image"
+              name="image"
+              type="text"
+              value="test5"
+            />
+          </section>
+          <button
+            class="flex border-4 font-bold bg-indigo-400 m-auto text-slate-200 rounded-md text-2xl p-2 mb-5"
+          >
+            Save Game
+          </button>
+          
+        </form>
+        <button
+          class="flex border-4 font-bold bg-indigo-400 m-auto text-slate-200 rounded-md text-2xl p-2 mb-5"
+        >
+          <a
+            href="/profile"
+          >
+            Back to Profile
+          </a>
+        </button>
+      </section>
+      <a
+        class="flex justify-end text-white mr-10 mb-5 static bottom-0 right-0"
+        href="/about-us"
+      >
+        About Us
+      </a>
+    </main>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`testing the functionality of going to our game details page and the view on that page 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <main>
+        <header
+          class="flex flex-row mt-5 pb-2"
+        >
+          <a
+            href="/"
+          >
+            <p
+              class="font-black text-slate-200 text-2xl ml-5"
+            >
+              VGR
+            </p>
+          </a>
+          <a
+            href="/"
+          >
+            <button
+              class="absolute top-0 right-0 mt-4 mr-4 w-70 text-slate-200 block font-bold ml-10 text-xl border-4 bg-indigo-400 rounded p-1"
+            >
+              Sign Out
+            </button>
+          </a>
+        </header>
+        <div>
+          <div
+            class="py-2"
+          >
+            <h1
+              aria-label="game title"
+              class="text-slate-200 text-3xl font-bold "
+            >
+              test5
+            </h1>
+            <img
+              aria-label="game image"
+              class="m-auto"
+              src="test5"
+            />
+            <h3
+              aria-label="game description"
+              class="font-bold text-slate-200"
+            >
+              test5
+            </h3>
+            <button
+              class="flex border-4 mt-5 font-bold bg-indigo-400 m-auto text-slate-200 rounded-md text-2xl p-2 mb-5"
+            >
+              <a
+                href="/library/edit/6"
+              >
+                edit
+              </a>
+            </button>
+            <button
+              class="flex border-4 mt-5 font-bold bg-indigo-400 m-auto text-slate-200 rounded-md text-2xl p-2 mb-5"
+            >
+              Delete Game
+            </button>
+          </div>
+        </div>
+        <a
+          class="flex justify-end text-white mr-10 mb-5 static bottom-0 right-0"
+          href="/about-us"
+        >
+          About Us
+        </a>
+      </main>
+    </div>
+  </body>,
+  "container": <div>
+    <main>
+      <header
+        class="flex flex-row mt-5 pb-2"
+      >
+        <a
+          href="/"
+        >
+          <p
+            class="font-black text-slate-200 text-2xl ml-5"
+          >
+            VGR
+          </p>
+        </a>
+        <a
+          href="/"
+        >
+          <button
+            class="absolute top-0 right-0 mt-4 mr-4 w-70 text-slate-200 block font-bold ml-10 text-xl border-4 bg-indigo-400 rounded p-1"
+          >
+            Sign Out
+          </button>
+        </a>
+      </header>
+      <div>
+        <div
+          class="py-2"
+        >
+          <h1
+            aria-label="game title"
+            class="text-slate-200 text-3xl font-bold "
+          >
+            test5
+          </h1>
+          <img
+            aria-label="game image"
+            class="m-auto"
+            src="test5"
+          />
+          <h3
+            aria-label="game description"
+            class="font-bold text-slate-200"
+          >
+            test5
+          </h3>
+          <button
+            class="flex border-4 mt-5 font-bold bg-indigo-400 m-auto text-slate-200 rounded-md text-2xl p-2 mb-5"
+          >
+            <a
+              href="/library/edit/6"
+            >
+              edit
+            </a>
+          </button>
+          <button
+            class="flex border-4 mt-5 font-bold bg-indigo-400 m-auto text-slate-200 rounded-md text-2xl p-2 mb-5"
+          >
+            Delete Game
+          </button>
+        </div>
+      </div>
+      <a
+        class="flex justify-end text-white mr-10 mb-5 static bottom-0 right-0"
+        href="/about-us"
+      >
+        About Us
+      </a>
+    </main>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`testing the view for the signup page 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <main>
+        <header
+          class="flex flex-row mt-5 pb-2"
+        >
+          <a
+            href="/"
+          >
+            <p
+              class="font-black text-slate-200 text-2xl ml-5"
+            >
+              VGR
+            </p>
+          </a>
+          <a
+            href="/login"
+          >
+            <button
+              aria-label="header sign in"
+              class="absolute top-0 right-0 mt-4 mr-4 w-70 text-slate-200 block font-bold ml-10 text-xl border-4 bg-indigo-400 rounded p-1"
+            >
+              Sign In
+            </button>
+          </a>
+        </header>
+        <section
+          class="mt-5 my-5"
+        >
+          <form
+            class="bg-white shadow-md rounded py-4 px-4"
+          >
+            <legend
+              class="text-sm font-bold "
+            >
+              Sign Up
+            </legend>
+            <section>
+              <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="email"
+              >
+                email:
+              </label>
+              <input
+                class="shadow appearance-none border rounded w-full py-1 px-1 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                id="email"
+                name="email"
+                placeholder="email"
+                type="email"
+                value=""
+              />
+            </section>
+            <section>
+              <label
+                aria-label="password"
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="password"
+              >
+                Password:
+              </label>
+              <input
+                class="shadow appearance-none border rounded w-full py-1 px-1 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                id="password"
+                name="password"
+                placeholder="password"
+                type="password"
+                value=""
+              />
+            </section>
+            <button
+              aria-label="sign in button"
+              class="bg-blue-500 hover:bg-blue-700 py-0.3 text-white font-bold rounded focus:outline-none focus:shadow-outline"
+              type="submit"
+            >
+              Sign In
+            </button>
+            
+          </form>
+          <p
+            class="text-slate-200 text-center"
+          >
+            Already have an account? 
+            <a
+              href="/login"
+            >
+              Sign In
+            </a>
+          </p>
+        </section>
+        <a
+          class="flex justify-end text-white mr-10 mb-5 static bottom-0 right-0"
+          href="/about-us"
+        >
+          About Us
+        </a>
+      </main>
+    </div>
+  </body>,
+  "container": <div>
+    <main>
+      <header
+        class="flex flex-row mt-5 pb-2"
+      >
+        <a
+          href="/"
+        >
+          <p
+            class="font-black text-slate-200 text-2xl ml-5"
+          >
+            VGR
+          </p>
+        </a>
+        <a
+          href="/login"
+        >
+          <button
+            aria-label="header sign in"
+            class="absolute top-0 right-0 mt-4 mr-4 w-70 text-slate-200 block font-bold ml-10 text-xl border-4 bg-indigo-400 rounded p-1"
+          >
+            Sign In
+          </button>
+        </a>
+      </header>
+      <section
+        class="mt-5 my-5"
+      >
+        <form
+          class="bg-white shadow-md rounded py-4 px-4"
+        >
+          <legend
+            class="text-sm font-bold "
+          >
+            Sign Up
+          </legend>
+          <section>
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="email"
+            >
+              email:
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-1 px-1 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+              id="email"
+              name="email"
+              placeholder="email"
+              type="email"
+              value=""
+            />
+          </section>
+          <section>
+            <label
+              aria-label="password"
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="password"
+            >
+              Password:
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-1 px-1 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+              id="password"
+              name="password"
+              placeholder="password"
+              type="password"
+              value=""
+            />
+          </section>
+          <button
+            aria-label="sign in button"
+            class="bg-blue-500 hover:bg-blue-700 py-0.3 text-white font-bold rounded focus:outline-none focus:shadow-outline"
+            type="submit"
+          >
+            Sign In
+          </button>
+          
+        </form>
+        <p
+          class="text-slate-200 text-center"
+        >
+          Already have an account? 
+          <a
+            href="/login"
+          >
+            Sign In
+          </a>
+        </p>
+      </section>
+      <a
+        class="flex justify-end text-white mr-10 mb-5 static bottom-0 right-0"
+        href="/about-us"
+      >
+        About Us
+      </a>
+    </main>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`testing the view of the login page 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <main>
+        <header
+          class="flex flex-row mt-5 pb-2"
+        >
+          <a
+            href="/"
+          >
+            <p
+              class="font-black text-slate-200 text-2xl ml-5"
+            >
+              VGR
+            </p>
+          </a>
+          <a
+            href="/login"
+          >
+            <button
+              aria-label="header sign in"
+              class="absolute top-0 right-0 mt-4 mr-4 w-70 text-slate-200 block font-bold ml-10 text-xl border-4 bg-indigo-400 rounded p-1"
+            >
+              Sign In
+            </button>
+          </a>
+        </header>
+        <section
+          class="mt-5 my-5"
+        >
+          <form
+            class="bg-white shadow-md rounded py-4 px-4"
+          >
+            <legend
+              class="text-sm font-bold "
+            >
+              Sign In
+            </legend>
+            <section>
+              <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="email"
+              >
+                email:
+              </label>
+              <input
+                class="shadow appearance-none border rounded w-full py-1 px-1 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                id="email"
+                name="email"
+                placeholder="email"
+                type="email"
+                value=""
+              />
+            </section>
+            <section>
+              <label
+                aria-label="password"
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="password"
+              >
+                Password:
+              </label>
+              <input
+                class="shadow appearance-none border rounded w-full py-1 px-1 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                id="password"
+                name="password"
+                placeholder="password"
+                type="password"
+                value=""
+              />
+            </section>
+            <button
+              aria-label="sign in button"
+              class="bg-blue-500 hover:bg-blue-700 py-0.3 text-white font-bold rounded focus:outline-none focus:shadow-outline"
+              type="submit"
+            >
+              Sign In
+            </button>
+            
+          </form>
+          <p
+            class="text-slate-200 text-center"
+          >
+            Need an account? 
+            <a
+              href="/signup"
+            >
+              Sign Up
+            </a>
+          </p>
+        </section>
+        <a
+          class="flex justify-end text-white mr-10 mb-5 static bottom-0 right-0"
+          href="/about-us"
+        >
+          About Us
+        </a>
+      </main>
+    </div>
+  </body>,
+  "container": <div>
+    <main>
+      <header
+        class="flex flex-row mt-5 pb-2"
+      >
+        <a
+          href="/"
+        >
+          <p
+            class="font-black text-slate-200 text-2xl ml-5"
+          >
+            VGR
+          </p>
+        </a>
+        <a
+          href="/login"
+        >
+          <button
+            aria-label="header sign in"
+            class="absolute top-0 right-0 mt-4 mr-4 w-70 text-slate-200 block font-bold ml-10 text-xl border-4 bg-indigo-400 rounded p-1"
+          >
+            Sign In
+          </button>
+        </a>
+      </header>
+      <section
+        class="mt-5 my-5"
+      >
+        <form
+          class="bg-white shadow-md rounded py-4 px-4"
+        >
+          <legend
+            class="text-sm font-bold "
+          >
+            Sign In
+          </legend>
+          <section>
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="email"
+            >
+              email:
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-1 px-1 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+              id="email"
+              name="email"
+              placeholder="email"
+              type="email"
+              value=""
+            />
+          </section>
+          <section>
+            <label
+              aria-label="password"
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="password"
+            >
+              Password:
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-1 px-1 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+              id="password"
+              name="password"
+              placeholder="password"
+              type="password"
+              value=""
+            />
+          </section>
+          <button
+            aria-label="sign in button"
+            class="bg-blue-500 hover:bg-blue-700 py-0.3 text-white font-bold rounded focus:outline-none focus:shadow-outline"
+            type="submit"
+          >
+            Sign In
+          </button>
+          
+        </form>
+        <p
+          class="text-slate-200 text-center"
+        >
+          Need an account? 
+          <a
+            href="/signup"
+          >
+            Sign Up
+          </a>
+        </p>
+      </section>
+      <a
+        class="flex justify-end text-white mr-10 mb-5 static bottom-0 right-0"
+        href="/about-us"
+      >
+        About Us
+      </a>
+    </main>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
