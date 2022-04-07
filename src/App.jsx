@@ -32,6 +32,7 @@ export default function App() {
               <Route path="/about-us">
                 <About />
               </Route>
+
               <ProtectedRoute path="/library/edit/:gameid">
                 <AddEdit isAdding />
               </ProtectedRoute>

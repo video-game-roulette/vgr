@@ -11,15 +11,19 @@ export default function Login({ isSigningUp = false }) {
   const handleAuth = async (email, password) => {
     try {
       if (isSigningUp) {
-        await signUpUser(email, password);
+        const user = await signUpUser(email, password);
+        setUser(user);
       } else {
-        const loggedIn = await signInUser(email, password);
-        setUser(loggedIn.email);
+        const user = await signInUser(email, password);
+        setUser(user);
       }
+      history.replace('/profile');
     } catch (error) {
       throw error;
     } finally {
-      history.replace('/profile');
+      // i wouldn't use a finally here -- you can just put that in the try.
+      // You don't want to redirect on failure -- you only want to redirect
+      // if the auth is succesful -- finally runs regardless
     }
   };
 

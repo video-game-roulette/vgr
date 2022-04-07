@@ -31,6 +31,9 @@ export async function deleteGame(id) {
 }
 
 export async function getUserGame() {
+  // you shouldn't need the .match if you have
+  //  RLS properly setup on your games table
+
   const response = await client
     .from('games')
     .select('*')
