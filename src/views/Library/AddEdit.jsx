@@ -12,6 +12,8 @@ export default function AddEdit({ isAdding = false }) {
   const { gameid } = useParams();
 
   useEffect(() => {
+    // this is throwing an error on the "/addgame" route
+    // because you don't have a gameId
     const fetchData = async () => {
       const resp = await getGamesById(gameid);
       setGame(resp);

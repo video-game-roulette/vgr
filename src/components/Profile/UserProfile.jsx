@@ -7,19 +7,29 @@ export default function UserProfile({ game }) {
   const data = game.data;
 
   //Randomizer Function
-  const random = Math.floor(Math.random() * data.length);
-  const randomGame = data[random].id;
+  // data could be empty (think new users)
+  // this throws an error and prevents the entire page from
+  // rendering on new users
+  // wrap it in a function to prevent this
+  const getRandomGame = () => {
+    if (data.length) {
+      const random = Math.floor(Math.random() * data.length);
+      return data[random].id;
+    }
+  };
 
   return (
     <div>
       <h1 className="font-extrabold mt-4 mb-2 text-slate-100 flex justify-center">
-        Welcome {user}
+        Welcome {user.email}
       </h1>
-      <Link to={`/profile/${randomGame}`}>
-        <button className="bg-slate-100 mt-6 ml-10 rounded-md font-bold text-blue-600 px-1 ">
-          Find A Game
-        </button>
-      </Link>
+      {getRandomGame() && (
+        <Link to={`/profile/${getRandomGame()}`}>
+          <button className="bg-slate-100 mt-6 ml-10 rounded-md font-bold text-blue-600 px-1 ">
+            Find A Game
+          </button>
+        </Link>
+      )}
       <Link to="/library/addgame">
         <button className="bg-indigo-500 mt-6 rounded-md ml-20 font-bold text-slate-100 px-1 left-2">
           Add Game

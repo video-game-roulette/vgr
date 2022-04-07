@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import UserProfile from '../../components/Profile/UserProfile';
 import { useGame } from '../../context/GameContext';
-import { getUserGame } from '../../services/game';
+import { fetchGames, getUserGame } from '../../services/game';
 
 export default function Profile() {
   const { game, setGame } = useGame();
